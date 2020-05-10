@@ -1,0 +1,53 @@
+@mixin link {
+  display: inline-block;
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 10px;
+  font-weight: bold;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 20px 0;
+  color: black;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+}
+
+.wrapper {
+  display: flex;
+}
+.left__wrapper {
+  background-color: #CCFFFF;
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 60px; 
+  box-sizing: border-box;
+
+  &__link  {
+    width: 80%;
+    height: 80px;
+
+  } 
+
+  &__link--white {
+    @include link;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__link--blue {
+    @include link;
+    background-color: #0099FF;
+    color: white;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  
+  
+}
+
