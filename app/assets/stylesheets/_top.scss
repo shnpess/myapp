@@ -13,11 +13,8 @@
   box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
 }
 
-.wrapper {
-  display: flex;
-}
-.left__wrapper {
-  background-color: #CCFFFF;
+@mixin half-wrapper {
+  background-color: #FFC7AF;
   width: 50vw;
   height: 100vh;
   display: flex;
@@ -25,11 +22,40 @@
   align-items: center;
   padding: 100px 60px; 
   box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  font-family: serif;
+}
+
+// トップ左側ーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+h1{
+  color: #444;
+  font-size: 24px;
+  line-height: 1.6em;
+  border-bottom: 1px solid #bfbfbf;
+  &:first-letter{
+      font-size: 48px;
+  }
+}
+
+.top-logo {
+  width: 170px;
+  height: 170px;
+  border-radius: 10%;
+  margin-bottom: 20px;
+}
+.left__wrapper {
+  @include half-wrapper;
 
   &__link  {
     width: 80%;
     height: 80px;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
   } 
 
   &__link--white {
@@ -37,17 +63,77 @@
     &:hover {
       opacity: 0.8;
     }
+    &:active {
+      position: relative;
+      top: 5px;
+      box-shadow: none;
+    }
   }
 
   &__link--blue {
     @include link;
-    background-color: #0099FF;
+    background-color: #FF9933;
     color: white;
     &:hover {
       opacity: 0.8;
     }
+    &:active {
+      position: relative;
+      top: 5px;
+      box-shadow: none;
+    }
+  }
+  &__test {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    margin-top: 20px;
+  }
+   
+}
+
+// トップ右側ーーーーーーーーーーーーーーーーーーーーーーーー
+.right__wrapper {
+  @include half-wrapper;
+  padding-top: 130px;
+  background-color: white;
+  &__text {
+    margin-bottom: 30px;
+  }
+  &__list {
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    background:rgba(0, 0, 0, 0) 
+    linear-gradient(transparent 60%, #FFDFEF 0%) repeat scroll 0 0;
   }
   
-  
 }
+
+.fas {
+  color: #11FFFF;
+}
+
+.right-image {
+
+  height: 150px;
+  width: 130px;
+  margin-left: 10px;
+  box-sizing: border-box;
+}
+
+h2 {
+  color: #6594e0;
+  border-bottom: dashed 2px #6594e0;
+  font-size: 30px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+
+
+
+
 
