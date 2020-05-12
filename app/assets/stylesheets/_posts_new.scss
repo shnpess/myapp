@@ -1,0 +1,67 @@
+@mixin form__part {
+  width: 50vw;
+  height: 40px;
+  margin-top: 20px;
+}
+
+
+.form {
+  padding: 50px;
+  
+
+  .form__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+    .form__title {
+      @include form__part;
+    }
+    .form__content {
+      @include form__part;
+      height: 200px;
+    }
+
+    .form__image {
+      @include form__part;
+      cursor: pointer;
+      color: #FF9933;
+      
+
+      input{
+        display: none;
+      }
+      &__text {
+        font-size: 16px;
+        color: #FF9933;
+       
+      }
+    }
+
+
+    .send__btn {
+    cursor: pointer;
+    width: 80px;
+    height: 50px;
+    background-color: #FF9933;
+    border-radius: 10px;
+    font-weight: bold;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+
+      &:hover {
+        opacity: 0.7;
+      }
+      &:active {
+        position: relative;
+        top: 5px;
+        box-shadow: none;
+      }
+    }
+  }
+}
+
