@@ -54,6 +54,7 @@
 
 .main__contents {
   display: flex;
+  
 }
 
 .left__contents {
@@ -86,6 +87,8 @@
   width: calc(100vw - 250px);
   height: calc(100vh - 70px);
   position: relative;
+  overflow: scroll;
+  padding: 50px;
 }
 
 .right__content {
@@ -110,6 +113,22 @@
   }
 }
 
+.posts {
+
+  .post__content {
+    background: #fffde8;
+    box-shadow: 0px 0px 0px 10px #fffde8;/*線の外側*/
+    border: dashed 2px #ffb03f;/*破線*/
+    border-radius: 9px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+
+    .post__content__image {
+      padding: 20px;
+    }
+  }
+}
 
 
 
