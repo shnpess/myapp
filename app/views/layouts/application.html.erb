@@ -10,6 +10,44 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="main__wrapper">
+      <div class="header">
+        <div class="header__logo">
+          <%= image_tag "cat01.png" %>
+          <h1>Hallo Cats!</h1>
+        </div>
+        <div class="header__list">
+          <ul>
+            <li><i class="far fa-user"></i> About me</li>
+            <li><i class="fas fa-cog"></i> Setting</li>
+            <li><i class="fas fa-sign-out-alt"></i> Log Out</li>
+          </ul>
+        </div>
+      </div>
+      <div class="main__contents">
+        <div class="left__contents">
+          <div class="left__content">
+            <i class="fas fa-paw"></i> 投稿一覧
+          </div>
+          <div class="left__content">
+            <i class="fas fa-paw"></i> マイページ
+          </div>
+          <div class="left__content">
+            <i class="fas fa-paw"></i> ユーザー
+          </div>
+          <div class="left__content">
+            <i class="fas fa-paw"></i> ヘルプ
+          </div>
+        </div>
+        <div class="right__contents">
+          <div class="right__content">
+            <%= yield %>
+            <%# <div class="post__logo">
+              投稿
+            </div> %>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
