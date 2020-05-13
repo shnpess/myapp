@@ -85,7 +85,7 @@
 .right__contents {
   width: calc(100vw - 250px);
   height: calc(100vh - 70px);
-  position: relative;
+  
   overflow: scroll;
   padding: 50px;
 }
@@ -125,7 +125,7 @@
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
-
+    color: black;
 
     .post__content__image {
       padding: 20px;
