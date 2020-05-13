@@ -11,6 +11,7 @@
 </div>
 </div>
 </div>
-
+<% if user_signed_in? && current_user.id == @post.user_id %>
 <%= link_to "編集する", edit_post_path(@post.id) %>
 <%= link_to "削除する", post_path(@post.id), method: :delete %>
+<% end %>

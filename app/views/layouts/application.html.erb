@@ -54,23 +54,26 @@
       <div class="main__contents">
         <div class="left__contents">
           <div class="left__content">
-
-          <%= link_to posts_path do %>
-            <i class="fas fa-paw"></i> 投稿一覧
+            <%= link_to posts_path do %>
+              <i class="fas fa-paw"></i> 投稿一覧
+            <% end %>
+          </div>
+          <% if user_signed_in? %>
+          <div class="left__content">
+            <%= link_to user_path(current_user.id) do %>
+              <i class="fas fa-paw"></i> マイページ
+            <% end %>
+          </div>
+            <div class="left__content">
+              <%= link_to users_path do %>
+                <i class="fas fa-paw"></i> ユーザー
+              <% end %>
+            </div>
+            <div class="left__content">
+              <i class="fas fa-paw"></i> ヘルプ
+            </div>
+          </div>
           <% end %>
-
-          </div>
-          <div class="left__content">
-            <i class="fas fa-paw"></i> マイページ
-          </div>
-          <div class="left__content">
-            <i class="fas fa-paw"></i> ユーザー
-          </div>
-          <div class="left__content">
-            <i class="fas fa-paw"></i> ヘルプ
-          </div>
-        </div>
-        
         <div class="right__contents">
           <div class="right__content">
             <%= yield %>
