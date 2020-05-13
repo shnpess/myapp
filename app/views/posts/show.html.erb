@@ -1,0 +1,16 @@
+<div class="posts">
+<div class="post__content">
+<div class="post__content__image">
+  <%= image_tag @post.image.url %>
+</div>
+<div class="post__content__title">
+  <%= @post.title %>
+</div>
+<div class="post__content__text">
+  <%= @post.content %>
+</div>
+</div>
+</div>
+
+<%= link_to "編集する", edit_post_path(@post.id) %>
+<%= link_to "削除する", post_path(@post.id), method: :delete %>
