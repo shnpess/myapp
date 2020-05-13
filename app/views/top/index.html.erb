@@ -15,9 +15,9 @@
         <h1>Hello Cats!</h1>
         <div class="left__wrapper__link">
           <%= image_tag "cat01.png", class: "top-logo" %>
-          <a href="#" class="left__wrapper__link--white">Sign Up</a>
-          <a href="#" class="left__wrapper__link--blue">Log In</a>
-          <a href="#" class="left__wrapper__test">Test Log In</a>
+          <%= link_to "Sign Up", new_user_registration_path, class: "left__wrapper__link--white" %>
+          <%= link_to "Log In", new_user_session_path, class: "left__wrapper__link--blue" %>
+          <a href="#" class="left__wrapper__test">Test Log In</>
           
         </div>
       </div>

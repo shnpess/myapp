@@ -2,6 +2,7 @@
 * {
   font-family: serif;
   box-sizing: border-box;
+  text-decoration: none;
 }
 .header {
   height: 70px;
@@ -18,12 +19,10 @@
     padding: 5px;
   }
 
-  &__logo h1 {
+  &__logo span {
     color: #444;
-    line-height: 1.6em;
-    line-height: 80px;
     font-size: 24px;
-    padding: 5px 20px 0 0;
+    
     // border-bottom: 1px solid #bfbfbf;
       &:first-letter{
       font-size: 48px;
@@ -114,6 +113,9 @@
 }
 
 .posts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   .post__content {
     background: #fffde8;
@@ -123,6 +125,7 @@
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
+
 
     .post__content__image {
       padding: 20px;
