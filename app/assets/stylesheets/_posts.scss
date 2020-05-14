@@ -13,7 +13,7 @@
 
   &__logo {
     display: flex;
-    justify-content: space-around;
+    
     height: 70px;
     width: 250px;
     padding: 5px;
@@ -22,6 +22,7 @@
   &__logo span {
     color: #444;
     font-size: 24px;
+    margin-top: 5px;
     
     // border-bottom: 1px solid #bfbfbf;
       &:first-letter{
@@ -32,7 +33,7 @@
   &__logo img {
     height: 60px;
     width: 60px;
-    margin: 10px 0 0px 5px;
+    margin: 10px 5px 5px 10px;
   }
   
   
@@ -86,7 +87,6 @@
 .right__contents {
   width: calc(100vw - 250px);
   height: calc(100vh - 70px);
-  
   overflow: scroll;
   padding: 20px;
 }
@@ -115,11 +115,11 @@
 
 .posts {
   display: flex;
-  // flex-direction: column;
-  // align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
 
   .post__content {
-    width: 400px;
+    width: 410px;
     height: 310px;
     background: #fffde8;
     box-shadow: 0px 0px 0px 10px #fffde8;/*線の外側*/
@@ -127,24 +127,87 @@
     border-radius: 9px;
     margin-top: 30px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
     color: black;
     margin-left: 30px;
+    
+    &__image {
+      padding: 5px;
+    }
+
+    .comment {
+      font-size: 16px;
+      font-weight: bold;
+      background:rgba(0, 0, 0, 0) 
+      linear-gradient(transparent 80%, #FFDFEF 0%) repeat scroll 0 0;
+      width: 25%;
+    }
+    
     
     &__left {
       display: flex;
       flex-direction: column;
+      padding: 5px 0px 0px 5px;
+      
+
+      &__part {
+        font-size: 16px;
+        padding-left: 5px;
+        bottom: -10px;
+        left: 10px;
+      }
+      
     }
 
     &__right {
       display: flex;
       flex-direction: column;
+      padding: 15px 5px 10px 5px;
+      height: 180px;
+      
+      &__part {
+        font-size: 16px;
+        margin-top: 10px;
+        font-weight: bold;
+        background:rgba(0, 0, 0, 0) 
+        linear-gradient(transparent 80%, #FFDFEF 0%) repeat scroll 0 0;
+      }
     }
   }
 }
 
-    .post__content__image {
-      padding: 5px;
-    }
+.edit {
+  padding: 20px 300px;
 
+}
+
+
+.edit__form {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  display: inline-block;
+  background-color: #FF9933;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+  padding: 10px;
+}
+   
+.destroy__form {
+  font-size: 16px;
+  font-weight: bold;
+  color: gray;
+  display: inline-block;
+  background-color: #e0ffff;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+  padding: 10px;
+}
 

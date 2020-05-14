@@ -13,12 +13,12 @@
     <div class="main__wrapper">
     <%# ヘッダー %>
       <div class="header">
+        <%= link_to root_path do %>
         <div class="header__logo">
-          <%= link_to root_path do %>
           <%= image_tag "cat01.png" %>
           <span>Hello Cats!</span>
-        <% end %>  
         </div>
+        <% end %>  
         <div class="header__list">
           <ul>
             <% if user_signed_in? %>
@@ -55,7 +55,9 @@
         <div class="left__contents">
           <div class="left__content">
             <%= link_to posts_path do %>
+              <div class="left__content__index">
               <i class="fas fa-paw"></i> 投稿一覧
+              </div>
             <% end %>
           </div>
           <% if user_signed_in? %>

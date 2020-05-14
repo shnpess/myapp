@@ -1,28 +1,50 @@
 <div class="posts">
-<div class="post__content">
+  <div class="post__content">
+    <div class="post__content__left">
       <div class="post__content__image">
         <%= image_tag @post.image.url %>
       </div>
-      <div class="post__content__name">
-        <%= @post.name %>
+      <span class="comment">コメント</span>
+    </div>
+    <div class="post__content__right">
+      <div class="post__content__right__part">
+        名前：<%= @post.name %>
       </div>
-      <div class="post__content__age">
-        <%= @post.age %>
+      <div class="post__content__right__part">
+        年齢：<%= @post.age %>歳
       </div>
-      <div class="post__content__weight">
-        <%= @post.weight %>
+      <div class="post__content__right__part">
+        体重：<%= @post.weight %>kg
       </div>
-      <div class="post__content__gender">
-        <%= @post.gender %>
+      <div class="post__content__right__part">
+        性別：<%= @post.gender %>
       </div>
-      <div class="post__content__character">
-        <%= @post.character %>
-      </div>
-      <div class="post__content__text">
-        <%= @post.content %>
+      <div class="post__content__right__part">
+        性格：<%= @post.character %>
       </div>
     </div>
+    <div class="post__content__left__part">
+      <%= @post.content %>
+    </div>
+  </div>
+</div>
+<div class="edit">
 <% if user_signed_in? && current_user.id == @post.user_id %>
-<%= link_to "編集する", edit_post_path(@post.id) %>
-<%= link_to "削除する", post_path(@post.id), method: :delete %>
+  <%= link_to edit_post_path(@post.id) do %>
+    <div class="edit__form">
+      編集する
+    </div>
+  <% end %>
+  <%= link_to post_path(@post.id), method: :delete do %>
+    <div class="destroy__form">
+      削除する
+    </div>
+  <% end %>
+<% end %>
+</div>
+
+<%= link_to new_post_path do %>
+<div class="post__logo">
+   投稿
+</div>
 <% end %>
