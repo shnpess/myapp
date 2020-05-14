@@ -1,32 +1,32 @@
 <div class="posts">
   <% @posts.each do |post| %>
   <%= link_to post_path(post.id) do %>
-  
     <div class="post__content">
       <div class="post__content__left">
         <div class="post__content__image">
           <%= image_tag post.image.url %>
         </div>
-        <div class="post__content__text">
-          <%= post.content %>
-        </div>
+        <span class="comment">コメント</span>
       </div>
       <div class="post__content__right">
-        <div class="post__content__name">
-          <%= post.name %>
+        <div class="post__content__right__part">
+          名前：<%= post.name %>
         </div>
-        <div class="post__content__age">
-          <%= post.age %>
+        <div class="post__content__right__part">
+          年齢：<%= post.age %>歳
         </div>
-        <div class="post__content__weight">
-          <%= post.weight %>
+        <div class="post__content__right__part">
+          体重：<%= post.weight %>kg
         </div>
-        <div class="post__content__gender">
-          <%= post.gender %>
+        <div class="post__content__right__part">
+          性別：<%= post.gender %>
         </div>
-        <div class="post__content__character">
-          <%= post.character %>
+        <div class="post__content__right__part">
+          性格：<%= post.character %>
         </div>
+      </div>
+      <div class="post__content__left__part">
+        <%= post.content %>
       </div>
     </div>
   <% end %>
