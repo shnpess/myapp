@@ -26,7 +26,7 @@
               <li><i class="far fa-user"></i> About me</li>
             <% end %>
 
-            <%= link_to "#", method: :delete do %>
+            <%= link_to edit_user_path(current_user.id) do %>
               <li><i class="fas fa-cog"></i> Setting</li>
             <% end %>
 

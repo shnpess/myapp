@@ -1,5 +1,26 @@
-<% @users.each do |user| %>
+<div class="posts">
+  <% @users.each do |user| %>
   <%= link_to user_path(user.id) do %>
-  <%= user.id %>
+    <div class="post__content">
+      <div class="post__content__left">
+        <% if user.picture.url %>
+         <div class="post__content__image">
+          <%= image_tag user.picture.url %>
+        </div>
+        <% end %>
+        <span class="comment">コメント</span>
+      </div>
+      <div class="post__content__right">
+        <div class="post__content__right__part">
+          名前：<%= user.nickname %>
+        </div>
+      </div>
+      <div class="post__content__left__part">
+        <%= user.profile %>
+      </div>
+    </div>
   <% end %>
-<% end %>
+  <% end %>
+</div>
+
+
