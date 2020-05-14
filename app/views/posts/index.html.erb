@@ -3,14 +3,30 @@
   <%= link_to post_path(post.id) do %>
   
     <div class="post__content">
-      <div class="post__content__image">
-        <%= image_tag post.image.url %>
+      <div class="post__content__left">
+        <div class="post__content__image">
+          <%= image_tag post.image.url %>
+        </div>
+        <div class="post__content__text">
+          <%= post.content %>
+        </div>
       </div>
-      <div class="post__content__title">
-        <%= post.title %>
-      </div>
-      <div class="post__content__text">
-        <%= post.content %>
+      <div class="post__content__right">
+        <div class="post__content__name">
+          <%= post.name %>
+        </div>
+        <div class="post__content__age">
+          <%= post.age %>
+        </div>
+        <div class="post__content__weight">
+          <%= post.weight %>
+        </div>
+        <div class="post__content__gender">
+          <%= post.gender %>
+        </div>
+        <div class="post__content__character">
+          <%= post.character %>
+        </div>
       </div>
     </div>
   <% end %>
