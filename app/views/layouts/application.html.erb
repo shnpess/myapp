@@ -11,7 +11,6 @@
 
   <body>
     <div class="main__wrapper">
-    <%# ヘッダー %>
       <div class="header">
         <%= link_to root_path do %>
         <div class="header__logo">
@@ -74,15 +73,14 @@
             <div class="left__content">
               <i class="fas fa-paw"></i> ヘルプ
             </div>
-          </div>
           <% end %>
+        </div>
         <div class="right__contents">
           <div class="right__content">
             <%= yield %>
-            
           </div>
         </div>
       </div>
-    </div>
+    </div> 
   </body>
 </html>
