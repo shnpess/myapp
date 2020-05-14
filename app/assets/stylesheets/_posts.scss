@@ -88,7 +88,7 @@
   height: calc(100vh - 70px);
   
   overflow: scroll;
-  padding: 50px;
+  padding: 20px;
 }
 
 .right__content {
@@ -97,7 +97,7 @@
   .post__logo {
     position: absolute;
     bottom: 10px;
-    right: 30px;
+    right: 20px;
     display: inline-block;
     width: 80px;
     height: 50px;
@@ -115,10 +115,12 @@
 
 .posts {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  // flex-direction: column;
+  // align-items: center;
 
   .post__content {
+    width: 400px;
+    height: 310px;
     background: #fffde8;
     box-shadow: 0px 0px 0px 10px #fffde8;/*線の外側*/
     border: dashed 2px #ffb03f;/*破線*/
@@ -127,17 +129,22 @@
     display: flex;
     justify-content: space-between;
     color: black;
+    margin-left: 30px;
+    
+    &__left {
+      display: flex;
+      flex-direction: column;
+    }
 
-    .post__content__image {
-      padding: 20px;
+    &__right {
+      display: flex;
+      flex-direction: column;
     }
   }
 }
 
+    .post__content__image {
+      padding: 5px;
+    }
 
 
-// .footer {
-//   width: 100vw;
-//   height: 20px;
-//   background-color: #ffefd5;
-// }
