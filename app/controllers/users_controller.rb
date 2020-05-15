@@ -15,10 +15,15 @@ class UsersController < ApplicationController
   end
 
   def update
-    user = User.find(params[:id])
-  
-    user.update(user_params)
+    @user = User.find(params[:id])
+    @user.update(user_params)
+    if @user.save
+    flash[:notice] = "編集が完了しました"
     redirect_to posts_path
+    else
+      flash[:notice] = "編集に失敗しました"
+      render ("users/show")
+    end
   end
   private
   def user_params

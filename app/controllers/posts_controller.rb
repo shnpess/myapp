@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.all 
+    @posts = Post.includes(:user)
   end
 
   def new
@@ -9,8 +9,14 @@ class PostsController < ApplicationController
   end
 
   def create
-    Post.create(post_params)
-    redirect_to posts_path
+    @post = Post.create(post_params)
+    if @post.save
+      flash[:notice] = "投稿完了しました"
+      redirect_to posts_path
+    else
+      flash[:noice] = "投稿に失敗しました"
+      render ("posts/new")
+    end
   end
 
   def show
@@ -22,14 +28,21 @@ class PostsController < ApplicationController
   end
 
   def update
-    post = Post.find(params[:id])
-    post.update(post_params)
+    @post = Post.find(params[:id])
+    @post.update(post_params)
+    if @post.save
+    flash[:notice] = "編集完了しました"
     redirect_to posts_path
+    else
+      flash[:notice] = "編集に失敗しました"
+      render ("posts/edit")
+    end
   end
 
   def destroy
     post = Post.find(params[:id])
     post.destroy
+    flash[:notice] = "投稿を削除しました"
     redirect_to posts_path
   end
 

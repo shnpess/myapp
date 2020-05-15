@@ -117,6 +117,8 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  padding: 10px;
+
   
   .post__content {
     width: 410px;
@@ -153,9 +155,8 @@
 
       &__part {
         font-size: 16px;
-        padding-left: 5px;
-        bottom: -10px;
-        left: 10px;
+        margin-left: 10px;
+        
       }
       
     }
@@ -165,10 +166,12 @@
       flex-direction: column;
       padding: 15px 5px 10px 5px;
       height: 180px;
+      width: 140px;
       
       &__part {
         font-size: 16px;
-        margin-top: 10px;
+        margin-top: 8px;
+        
         font-weight: bold;
         background:rgba(0, 0, 0, 0) 
         linear-gradient(transparent 80%, #FFDFEF 0%) repeat scroll 0 0;
@@ -213,4 +216,14 @@
 
 .post__image {
   border-radius: 10px;
+  height: 170px;
+  width: 240px;
+  
+}
+
+
+.form-error {
+  text-align: center;
+  color: red;
+  font-size: 20px;
 }
