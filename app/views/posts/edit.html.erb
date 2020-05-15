@@ -1,3 +1,8 @@
+<% @post.errors.full_messages.each do |message| %>
+  <div class="form-error">
+    <%= message %>
+  </div>
+<% end %>
 <div class="form">
   <%= form_with(model: @post, local: true) do |form| %>
     <div class="form__content">

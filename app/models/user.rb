@@ -5,6 +5,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   validates :nickname, :email, uniqueness: true
+  validates :nickname, :email, presence: true
   has_many :posts
   mount_uploader :picture, ImageUploader
 end
