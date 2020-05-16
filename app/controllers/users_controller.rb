@@ -21,8 +21,8 @@ class UsersController < ApplicationController
     flash[:notice] = "編集が完了しました"
     redirect_to posts_path
     else
-      flash[:notice] = "編集に失敗しました"
-      render ("users/show")
+      flash.now[:alert] = "編集に失敗しました"
+      render ("users/edit")
     end
   end
   private
