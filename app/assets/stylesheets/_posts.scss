@@ -89,6 +89,7 @@
   height: calc(100vh - 70px);
   overflow: scroll;
   padding: 20px;
+  
 }
 
 .right__content {
@@ -118,7 +119,9 @@
   flex-direction: row;
   flex-wrap: wrap;
   padding: 10px;
-
+  justify-content: space-around;
+  
+  
   
   .post__content {
     width: 410px;
@@ -227,3 +230,9 @@
   color: red;
   font-size: 20px;
 }
+
+
+a, a:visited, a:focus, a:hover {
+  text-decoration: none;
+}
+

@@ -5,18 +5,25 @@
 <% end %>
 <div class="form">
   <%= form_with(model: @post, local: true) do |form| %>
-    <div class="form__content">
+    <div class="form__contents">
+      <% if @post.image.present? %>
+        <%= image_tag @post.image.url, id: :img_prev %>
+      <% else %>
+        <%= image_tag "", id: :img_prev, alt: "画像がありません"  %>
+      <% end %>
+      <%= form.label :image, class: "form__image" do %> 
+        <i class="fas fa-image fa-2x"></i>
+        <%= form.file_field :image %>
+        <span class="form__image__text">画像を変更する</span>
+        <div class="image__prev">
+        </div>
+      <% end %> 
       <%= form.text_field :name, placeholder: "＃名前", class: "form__string" %>
       <%= form.text_field :age, placeholder: "＃年齢", class: "form__string" %>
       <%= form.text_field :weight, placeholder: "＃体重", class: "form__string" %>
       <%= form.text_field :gender, placeholder: "＃性別", class: "form__string" %>
       <%= form.text_field :character, placeholder: "＃性格", class: "form__string" %>
       <%= form.text_area :content, placeholder: "＃自己紹介" , rows: "5", class: "form__content" %>
-      <%= form.label :image, class: "form__image" do %> 
-        <i class="fas fa-image fa-2x"></i>
-        <%= form.file_field :image %>
-        <span class="form__image__text">画像を追加する</span>
-      <% end %> 
       <%= form.submit "SEND", class: "send__btn" %>
     </div>
   <% end %>

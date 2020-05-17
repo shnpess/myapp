@@ -1,3 +1,7 @@
+<div class="my__page">
+  <%=  @user.nickname %>さんのマイページ
+</div>
+
 <div class="posts">
   <% @posts.each do |post| %>
   <%= link_to post_path(post.id) do %>
@@ -31,4 +35,42 @@
     </div>
   <% end %>
   <% end %>
+</div>
+
+
+
+<div class="container text-center">
+  <button type="button" class="post__logo" data-toggle="modal" data-target="#post">投稿</button>
+  <div class="modal fade" id="post" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="form">
+          <%= form_with(model: @post, local: true) do |form| %>
+            <div class="modal-body">
+              <div class="form__contents">
+                <% if @post.image.present? %>
+                  <%= image_tag @post.image.url, id: :img_prev %>
+                <% else %>
+                  <%= image_tag "", id: :img_prev, alt: "画像がありません"  %>
+                <% end %>
+                <%= form.label :image, class: "form__image" do %> 
+                  <i class="fas fa-image fa-2x"></i>
+                  <%= form.file_field :image %>
+                  <span class="form__image__text">画像を追加する</span>
+                <% end %> 
+                  
+                <span>名前: <%= form.text_field :name, class: "form__string" %></span>
+                <span>年齢: <%= form.text_field :age, class: "form__string" %></span>
+                <span>体重: <%= form.text_field :weight, class: "form__string" %></span>
+                <span>性別: <%= form.text_field :gender, class: "form__string" %></span>
+                <span>性格: <%= form.text_field :character, class: "form__string" %></span>
+                <span>　　  <%= form.text_area :content, placeholder: "好きなコメントをどうぞ！", class: "form__content" %></span>
+                <%= form.submit "SEND", class: "send__btn" %>
+                <button type="button" class="close__btn" data-dismiss="modal">閉じる</button>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

@@ -1,3 +1,7 @@
+<div class="setting__page">
+  <%=  @user.nickname %>さんの編集ページ
+</div>
+
 <% @user.errors.full_messages.each do |message| %>
   <div class="form-error">
     <%= message %>
@@ -5,16 +9,22 @@
 <% end %>
 <div class="form">
   <%= form_with(model: @user, local: true) do |form| %>
-    <div class="form__content">
+    <div class="form__contents">
+      <% if @user.picture.present? %>
+        <%= image_tag @user.picture.url, id: :img_prev %>
+      <% else %>
+        <%= image_tag "", id: :img_prev, alt: "画像がありません"  %>
+      <% end %>
+      <%= form.label :image, class: "form__image" do %> 
+        <i class="fas fa-image fa-2x"></i>
+        <%= form.file_field :image %>
+        <span class="form__image__text">プロフィール画像を変更する</span>
+      <% end %> 
+  
       <%= form.text_field :nickname, placeholder: "＃Nickname", class: "form__string" %>
       <%= form.text_field :email, placeholder: "＃Email", class: "form__string" %>
+      <%= form.text_area :profile, placeholder: "＃自己紹介" , rows: "5", class: "form__content" %>
       
-      <%= form.text_area :profile, placeholder: "＃自己紹介" , rows: "3", class: "form__content" %>
-      <%= form.label :picture, class: "form__image" do %> 
-        <i class="fas fa-image fa-2x"></i>
-        <%= form.file_field :picture %>
-        <span class="form__image__text">画像を追加する</span>
-      <% end %> 
       <%= form.submit "SEND", class: "send__btn" %>
     </div>
   <% end %>
