@@ -4,4 +4,5 @@ class Post < ApplicationRecord
   validates :name, length: { maximum: 6 } 
   validates :content, length: { maximum: 100 }   
   belongs_to :user
+  has_many :comments
 end
