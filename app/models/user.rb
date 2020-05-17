@@ -9,5 +9,6 @@ class User < ApplicationRecord
   validates :nickname, length: { maximum: 6 } 
   validates :profile, length: { maximum: 70 } 
   has_many :posts
+  has_many :comments
   mount_uploader :picture, ImageUploader
 end
