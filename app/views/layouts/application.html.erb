@@ -4,9 +4,8 @@
     <title>Hello Cats!</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
@@ -22,7 +21,7 @@
           <ul>
             <% if user_signed_in? %>
             
-            <%= link_to "#", method: :delete do %>
+            <%= link_to "#",  method: :delete do %>
               <li><i class="far fa-user"></i> About me</li>
             <% end %>
 

@@ -2,6 +2,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.includes(:user)
+    @post = Post.new
   end
 
   def new

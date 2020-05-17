@@ -1,38 +1,3 @@
-<div class="posts">
-  <% @posts.each do |post| %>
-  <%= link_to post_path(post.id), id: "links" do %>
-    <div class="post__content">
-      <div class="post__content__left">
-        <div class="post__content__image">
-          <%= image_tag post.image.url, class: "post__image" %>
-        </div>
-        
-      </div>
-      <div class="post__content__right">
-        <div class="post__content__right__part">
-          名前：<%= post.name %>
-        </div>
-        <div class="post__content__right__part">
-          年齢：<%= post.age %>歳
-        </div>
-        <div class="post__content__right__part">
-          体重：<%= post.weight %>kg
-        </div>
-        <div class="post__content__right__part">
-          性別：<%= post.gender %>
-        </div>
-        <div class="post__content__right__part">
-          性格：<%= post.character %>
-        </div>
-      </div>
-      <div class="post__content__left__part">
-        <%= post.content %>
-      </div>
-    </div>
-  <% end %>
-  <% end %>
-</div>
-
 <div class="container text-center">
   <button type="button" class="post__logo" data-toggle="modal" data-target="#post">投稿</button>
   <div class="modal fade" id="post" tabindex="-1" role="dialog" aria-hidden="true">
@@ -60,7 +25,7 @@
                 <%= form.text_field :character, placeholder: "＃性格", class: "form__string" %>
                 <%= form.text_area :content, placeholder: "＃自己紹介" , rows: "5", class: "form__content" %>
                 <%= form.submit "SEND", class: "send__btn" %>
-                <button type="button" class="close__btn" data-dismiss="modal">閉じる</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
             </div>
           <% end %>
         </div>
@@ -68,18 +33,3 @@
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
