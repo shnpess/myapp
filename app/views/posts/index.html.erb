@@ -16,18 +16,28 @@
         </div>
 
         <div class="post__content__right">
-          <div class="post__content__right__part">
-            名前：<%= post.name %>
+          <div class="ma">
+            <div class="post__content__right__part">
+              名前：<%= post.name %>
+            </div>
+            <div class="post__content__right__part">
+              種類：<%= post.kind %>
+            </div>
+            <div class="post__content__right__part">
+              年齢：<%= post.age %>
+            </div>
           </div>
-          <div class="post__content__right__part">
-            種類：<%= post.kind %>
-          </div>
-          <div class="post__content__right__part">
-            性別：<%= post.gender %>
-          </div>
-          <div class="post__content__right__part">
-            性格：<%= post.character %>
-          </div>
+          <div class="ma">
+            <div class="post__content__right__part">
+              性別：<%= post.gender %>
+            </div>
+            <div class="post__content__right__part">
+              予防接種：<%= post.vaccination %>
+            </div>
+            <div class="post__content__right__part">
+              性格：<%= post.character %>
+            </div>
+          </div>  
         </div>
       </div>
 
@@ -64,12 +74,18 @@
                   
                 <span>名前: <%= form.text_field :name, placeholder: "例)太郎",class: "form__string" %></span>
                 <span>種類: <%= form.text_field :kind, placeholder: "例)アメショ", class: "form__string" %></span>
+                <span>年齢: <%= form.text_field :age, placeholder: "例)1歳、子犬など", class: "form__string" %></span>
                 <div class="form__string__radio">
                 性別: <%= form.radio_button :gender, :"オス" %>
                 <%= form.label :gender, "オス", {value: :"オス", style: "display: inline-block;"} %>
                 <%= form.radio_button :gender, :"メス" %>
                 <%= form.label :gender, "メス", {value: :"メス", style: "display: inline-block;"} %>
-                
+                </div>
+                <div class="form__string__radio">
+                予防接種: <%= form.radio_button :vaccination, :"済み" %>
+                <%= form.label :vaccination, "済み", {value: :"済み", style: "display: inline-block;"} %>
+                <%= form.radio_button :vaccination, :"無し" %>
+                <%= form.label :vaccination, "無し", {value: :"無し", style: "display: inline-block;"} %>
                 </div>
                 <span>性格: <%= form.text_field :character, placeholder: "例)やんちゃ",class: "form__string" %></span>
                 <span>　　  <%= form.text_area :content, placeholder: "好きなコメントをどうぞ！", class: "form__content" %></span>
@@ -87,10 +103,6 @@
 
 
 
-
-
-<label><input type="radio" name="radio">Good</label>
-  <label><input type="radio" name="radio">Bad</label>
 
 
 
