@@ -1,8 +1,9 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.includes(:user)
+    @posts = Post.includes(:user).order("created_at DESC")
     @post = Post.new
+    
   end
 
   def new
@@ -23,7 +24,7 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @comment = Comment.new
-    @comments = @post.comments.includes(:user)
+    @comments = @post.comments.includes(:user).order("created_at DESC")
   end
 
   def edit
@@ -51,7 +52,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:name, :age, :weight, :gender, :character, :image, :content).merge(user_id: current_user.id)
+    params.require(:post).permit(:name, :kind, :gender, :character, :image, :content).merge(user_id: current_user.id)
   
   end
 end

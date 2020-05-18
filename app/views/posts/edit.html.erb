@@ -18,12 +18,17 @@
         <div class="image__prev">
         </div>
       <% end %> 
-      <%= form.text_field :name, placeholder: "＃名前", class: "form__string" %>
-      <%= form.text_field :age, placeholder: "＃年齢", class: "form__string" %>
-      <%= form.text_field :weight, placeholder: "＃体重", class: "form__string" %>
-      <%= form.text_field :gender, placeholder: "＃性別", class: "form__string" %>
-      <%= form.text_field :character, placeholder: "＃性格", class: "form__string" %>
-      <%= form.text_area :content, placeholder: "＃自己紹介" , rows: "5", class: "form__content" %>
+        <span>名前: <%= form.text_field :name, placeholder: "例)太郎",class: "form__string" %></span>
+        <span>種類: <%= form.text_field :kind, placeholder: "例)アメショ", class: "form__string" %></span>
+        <div class="form__string__radio">
+        性別: <%= form.radio_button :gender, :"オス" %>
+        <%= form.label :gender, "オス", {value: :"オス", style: "display: inline-block;"} %>
+        <%= form.radio_button :gender, :"メス" %>
+        <%= form.label :gender, "メス", {value: :"メス", style: "display: inline-block;"} %>
+        
+        </div>
+        <span>性格: <%= form.text_field :character, placeholder: "例)やんちゃ",class: "form__string" %></span>
+        <span>　　  <%= form.text_area :content, placeholder: "好きなコメントをどうぞ！", class: "form__content" %></span>
       <%= form.submit "SEND", class: "send__btn" %>
     </div>
   <% end %>

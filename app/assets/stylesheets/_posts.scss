@@ -116,76 +116,95 @@
 
 .posts {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   padding: 10px;
-  justify-content: space-around;
+  
   
   
   
   .post__content {
-    width: 410px;
-    height: 310px;
+    width: 70vw;
+    height: 60vh;
     background: #fffde8;
     box-shadow: 0px 0px 0px 10px #fffde8;/*線の外側*/
     border: dashed 2px #ffb03f;/*破線*/
     border-radius: 9px;
     margin-top: 30px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     color: black;
     margin-left: 30px;
+    padding: 40px;
     
-    &__image {
-      padding: 5px;
-    }
-
-    .comment {
-      font-size: 16px;
-      font-weight: bold;
-      background:rgba(0, 0, 0, 0) 
-      linear-gradient(transparent 80%, #FFDFEF 0%) repeat scroll 0 0;
-      width: 25%;
-    }
-    
-    
-    &__left {
+    &__upper {
       display: flex;
-      flex-direction: column;
-      padding: 5px 0px 0px 5px;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 18px;
       
-
-      &__part {
-        font-size: 16px;
-        margin-left: 10px;
-        
+      
+      .nickname {
+        font-size: 18px;
       }
       
-    }
-
-    &__right {
-      display: flex;
-      flex-direction: column;
-      padding: 15px 5px 10px 5px;
-      height: 180px;
-      width: 140px;
-      
-      &__part {
-        font-size: 16px;
-        margin-top: 8px;
-        
-        font-weight: bold;
-        background:rgba(0, 0, 0, 0) 
-        linear-gradient(transparent 80%, #FFDFEF 0%) repeat scroll 0 0;
+      .post__user__image {
+        border-radius: 10px;
+        height: 50px;
+        width: 50px;
+        margin: 10px;
       }
     }
+    
+
+
+    &__middle {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin: 0 20px 0 10px;
+
+      .post__content__image {
+        
+        .post__image {
+          border-radius: 10px;
+          height: 25vh;
+          width: 20vw;
+        } 
+      }
+    }
+      &__right {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 5px 10px 5px;
+        height: 180px;
+        width: 25vw;
+        
+        &__part {
+          font-size: 16px;
+          margin-top: 16px;
+          
+          font-weight: bold;
+          background:rgba(0, 0, 0, 0) 
+          linear-gradient(transparent 80%, #FFDFEF 0%) repeat scroll 0 0;
+        }
+      }
+    
+      &__bottom {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        margin-left: 4vw;
+        
+      }
+
   }
 }
 
 .edit {
-  padding: 20px 300px;
-
+  margin-top: 10px;
+  z-index: 100;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 
@@ -215,14 +234,9 @@
   text-decoration: none;
   box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
   padding: 10px;
+  margin-left: 10px;
 }
 
-.post__image {
-  border-radius: 10px;
-  height: 170px;
-  width: 240px;
-  
-}
 
 
 .form-error {
@@ -236,3 +250,63 @@ a, a:visited, a:focus, a:hover {
   text-decoration: none;
 }
 
+
+
+
+
+.comment__container {
+  margin-top: 10px;
+  display: flex;
+  
+}
+
+.comments {
+  width: 20vw;
+  height: 20vh;
+  border-radius: 10px;
+  margin-left: 30px;
+  font-size: 18px;
+  }
+  
+  .comment__part {
+    margin: 10px;
+  }
+
+.comment__form { 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+.comment__input {
+  width: 30vw; 
+  font-size: 16px;
+  border-radius: 3px; 
+  border: 2px solid #ddd;
+  margin-right: 20px;
+  position: absolute;
+  bottom: 10px;
+  right: 120px;
+
+}
+
+.comment__send__btn {
+  cursor: pointer;
+  width: 80px;
+  height: 50px;
+  background-color: #93ffff;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-right: 30px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+}
+
+.create__time {
+  font-size: 12px;
+}
