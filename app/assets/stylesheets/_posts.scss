@@ -174,14 +174,14 @@
     }
       &__right {
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
         padding: 0px 5px 10px 5px;
         height: 180px;
-        width: 25vw;
+        // width: 25vw;
         
         &__part {
           font-size: 16px;
-          margin-top: 16px;
+          margin-top: 20px;
           
           font-weight: bold;
           background:rgba(0, 0, 0, 0) 
@@ -309,4 +309,11 @@ a, a:visited, a:focus, a:hover {
 
 .create__time {
   font-size: 12px;
+}
+
+.ma {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 20px;
 }
