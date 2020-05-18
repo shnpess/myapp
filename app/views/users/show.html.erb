@@ -6,33 +6,42 @@
   <% @posts.each do |post| %>
   <%= link_to post_path(post.id) do %>
     <div class="post__content">
-      <div class="post__content__left">
+    <div class="post__content__upper">
+        <div class="user__info">
+        <%= image_tag current_user.picture.url, class: "post__user__image" %>
+        <%= current_user.nickname %>さんの投稿
+        </div>
+        <%= post.created_at.strftime("%Y-%m-%d %H:%M:%S") %>
+      </div>
+
+      <div class="post__content__middle">
         <div class="post__content__image">
           <%= image_tag post.image.url, class: "post__image" %>
         </div>
-        
-      </div>
-      <div class="post__content__right">
-        <div class="post__content__right__part">
-          名前：<%= post.name %>
-        </div>
-        <div class="post__content__right__part">
-          年齢：<%= post.age %>歳
-        </div>
-        <div class="post__content__right__part">
-          体重：<%= post.weight %>kg
-        </div>
-        <div class="post__content__right__part">
-          性別：<%= post.gender %>
-        </div>
-        <div class="post__content__right__part">
-          性格：<%= post.character %>
+
+        <div class="post__content__right">
+          <div class="post__content__right__part">
+            名前：<%= post.name %>
+          </div>
+          <div class="post__content__right__part">
+            種類：<%= post.kind %>
+          </div>
+          <div class="post__content__right__part">
+            性別：<%= post.gender %>
+          </div>
+          <div class="post__content__right__part">
+            性格：<%= post.character %>
+          </div>
         </div>
       </div>
-      <div class="post__content__left__part">
-        <%= post.content %>
+
+      <div class="post__content__bottom">
+        <div class="post__content__left__part">
+          <%= post.content %>
+        </div>
       </div>
-    </div>
+
+  </div>
   <% end %>
   <% end %>
 </div>
@@ -58,12 +67,16 @@
                   <%= form.file_field :image %>
                   <span class="form__image__text">画像を追加する</span>
                 <% end %> 
-                  
-                <span>名前: <%= form.text_field :name, class: "form__string" %></span>
-                <span>年齢: <%= form.text_field :age, class: "form__string" %></span>
-                <span>体重: <%= form.text_field :weight, class: "form__string" %></span>
-                <span>性別: <%= form.text_field :gender, class: "form__string" %></span>
-                <span>性格: <%= form.text_field :character, class: "form__string" %></span>
+                <span>名前: <%= form.text_field :name, placeholder: "例)太郎",class: "form__string" %></span>
+                <span>種類: <%= form.text_field :kind, placeholder: "例)アメショ", class: "form__string" %></span>
+                <div class="form__string__radio">
+                性別: <%= form.radio_button :gender, :"オス" %>
+                <%= form.label :gender, "オス", {value: :"オス", style: "display: inline-block;"} %>
+                <%= form.radio_button :gender, :"メス" %>
+                <%= form.label :gender, "メス", {value: :"メス", style: "display: inline-block;"} %>
+                
+                </div>
+                <span>性格: <%= form.text_field :character, placeholder: "例)やんちゃ",class: "form__string" %></span>
                 <span>　　  <%= form.text_area :content, placeholder: "好きなコメントをどうぞ！", class: "form__content" %></span>
                 <%= form.submit "SEND", class: "send__btn" %>
                 <button type="button" class="close__btn" data-dismiss="modal">閉じる</button>

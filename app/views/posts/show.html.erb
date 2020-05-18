@@ -1,74 +1,86 @@
-<div class="posts">
-  <div class="post__content">
-    <div class="post__content__left">
-      <div class="post__content__image">
-        <%= image_tag @post.image.url, class: "post__image" %>
-      </div>
-    
-    </div>
-    <div class="post__content__right">
-      <div class="post__content__right__part">
-        名前：<%= @post.name %>
-      </div>
-      <div class="post__content__right__part">
-        年齢：<%= @post.age %>歳
-      </div>
-      <div class="post__content__right__part">
-        体重：<%= @post.weight %>kg
-      </div>
-      <div class="post__content__right__part">
-        性別：<%= @post.gender %>
-      </div>
-      <div class="post__content__right__part">
-        性格：<%= @post.character %>
-      </div>
-    </div>
-    <div class="post__content__left__part">
-      <%= @post.content %>
-    </div>
-  </div>
-</div>
 <div class="edit">
 <% if user_signed_in? && current_user.id == @post.user_id %>
-  <%= link_to edit_post_path(@post.id) do %>
-    <div class="edit__form">
-      編集する
-    </div>
-  <% end %>
   <%= link_to post_path(@post.id), method: :delete do %>
     <div class="destroy__form">
       削除する
     </div>
   <% end %>
+  <%= link_to edit_post_path(@post.id) do %>
+    <div class="edit__form">
+      編集する
+    </div>
+  <% end %>
 <% end %>
 </div>
 
-<%= link_to new_post_path do %>
-<div class="post__logo">
-   投稿
+<div class="posts">
+  <div class="post__content">
+    <div class="post__content__upper">
+        <div class="user__info">
+        <%= image_tag current_user.picture.url, class: "post__user__image" %>
+        <%= current_user.nickname %>さんの投稿
+        </div>
+        <%= @post.created_at %>
+      </div>
+
+      <div class="post__content__middle">
+        <div class="post__content__image">
+          <%= image_tag @post.image.url, class: "post__image" %>
+        </div>
+
+        <div class="post__content__right">
+          <div class="post__content__right__part">
+            名前：<%= @post.name %>
+          </div>
+          <div class="post__content__right__part">
+            種類：<%= @post.kind %>
+          </div>
+          <div class="post__content__right__part">
+            性別：<%= @post.gender %>
+          </div>
+          <div class="post__content__right__part">
+            性格：<%= @post.character %>
+          </div>
+        </div>
+      </div>
+
+      <div class="post__content__bottom">
+        <div class="post__content__left__part">
+          <%= @post.content %>
+        </div>
+      </div>
+
+  </div>
 </div>
-<% end %>
 
 
-  <div class="container">
-    <% if current_user %>
-      <%= form_with(model: [@post, @comment], local: true) do |form| %>
-        <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
-        <%= form.submit "SEND" %>
-      <% end %>
-    <% else %>
-      <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
-    <% end %>
-        <div class="comments">
+
+
+
+  <div class="comment__container">
+    <div class="comments">
       <h4>＜コメント一覧＞</h4>
       <% if @comments %>
         <% @comments.each do |comment| %>
+        <div class="comment__part">
           <p>
+            <div class="create__time"><%= comment.created_at.strftime("%Y-%m-%d %H:%M:%S") %></div>
             <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
             <%= comment.text %>
           </p>
+        </div>
         <% end %>
       <% end %>
     </div>
+    <div>
+      <% if current_user %>
+        <%= form_with(model: [@post, @comment], class: "comment__form", local: true) do |form| %>
+          <%= form.text_area :text, placeholder: "コメントする", class: "comment__input", rows: "2" %>
+          <%= form.submit "SEND", class: "comment__send__btn" %>
+        <% end %>
+      <% else %>
+        <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+      <% end %>
+      </div>
   </div>
 
