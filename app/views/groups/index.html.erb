@@ -1,0 +1,10 @@
+
+<div class="group__content">
+<% current_user.groups.each do |group| %>
+  <div class="group__name">
+  <%= link_to post_group_messages_path(group.post_id, group.id) do%>
+  <%= group.name %>
+  </div>
+<% end %>
+<% end %>
+</div>

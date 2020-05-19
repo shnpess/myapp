@@ -1,4 +1,10 @@
 
+*:focus {
+  outline: none !important;
+}
+
+
+
 * {
   font-family: serif;
   box-sizing: border-box;
@@ -7,7 +13,7 @@
 .header {
   height: 70px;
   width: 100vw;
-  background-color: #FFC7AF;
+  background-color: #ffddbc;
   display: flex;
   justify-content: space-between;
 
@@ -60,7 +66,7 @@
 .left__contents {
   height: calc(100vh - 70px);
   width: 250px;
-  background-color: #FFC7AF;
+  background-color: #ffddbc;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -89,7 +95,7 @@
   height: calc(100vh - 70px);
   overflow: scroll;
   padding: 20px;
-  
+  background-color: #ffddbc;
 }
 
 .right__content {
@@ -135,6 +141,7 @@
     color: black;
     margin-left: 30px;
     padding: 40px;
+    position: relative;
     
     &__upper {
       display: flex;
@@ -314,6 +321,40 @@ a, a:visited, a:focus, a:hover {
 .ma {
   display: flex;
   flex-direction: column;
-
   margin: 0 20px;
+}
+
+
+.chat__form {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  
+}
+
+.chat__send {
+  height: 40px;
+  background-color: #ffb03f;
+  color: white;
+  font-size: 18px;
+  border-radius: 10px;
+  padding: 5px;
+  text-decoration: none;
+  border: 2px solid black;
+}
+
+.chat__wrapper {
+  padding: 30px;
+}
+
+
+.chat__content {
+  display: flex;
+  flex-direction: column;
+  font-size: 26px;
+  
+}
+
+.chat__message {
+  margin: 30px 20px 0 0;
 }
