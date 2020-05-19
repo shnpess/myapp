@@ -1,4 +1,11 @@
 <div class="posts">
+
+<%= form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |form| %>
+  <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
+  <%= form.submit "検索", class: "search-btn" %>
+<% end %>
+
+
   <% @posts.each do |post| %>
   <%= link_to post_path(post.id), id: "links" do %>
     <div class="post__content">
