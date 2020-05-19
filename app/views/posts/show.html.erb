@@ -17,8 +17,8 @@
   <div class="post__content">
     <div class="post__content__upper">
         <div class="user__info">
-        <%= image_tag current_user.picture.url, class: "post__user__image" %>
-        <%= current_user.nickname %>さんの投稿
+        <%= image_tag @post.user.picture.url, class: "post__user__image" %>
+        <%= @post.user.nickname %>さんの投稿
         </div>
         <%= @post.created_at %>
       </div>
@@ -59,7 +59,11 @@
           <%= @post.content %>
         </div>
       </div>
-
+      <div class="chat__form">
+      <%= form_with(model: [@post, @group], local: true) do |form| %>
+      <%= form.submit "#{@post.user.nickname}さんとチャットする", class: "chat__send" %>
+      <% end %>
+      </div>
   </div>
 </div>
 
@@ -93,4 +97,5 @@
       <% end %>
       </div>
   </div>
+
 

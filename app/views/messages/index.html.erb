@@ -1,0 +1,23 @@
+<div class="chat__wrapper">
+  <div class="chat__content">
+    <% @messages.each do |message| %>
+    <div class="chat__message">
+      <%= message.content %> <span class="create__time"><%= message.created_at %></span>
+    </div>
+    <% end %>
+  </div>
+
+
+
+  <div>
+    <%= form_with(model: [@post, @group, @message], class: "comment__form", local: true) do |form| %>
+      <%= form.text_area :content, placeholder: "コメントする", class: "comment__input", rows: "2" %>
+      <%= form.submit "SEND", class: "comment__send__btn" %>
+    <% end %>
+  </div>
+</div>
+
+
+
+
+      
