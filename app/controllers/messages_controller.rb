@@ -9,10 +9,13 @@ class MessagesController < ApplicationController
 
   def create
     
-    @message = @group.messages.new(message_params)
+    @message = @group.messages.create(message_params)
     if @message.save
+      respond_to do |format|
+        format.html { redirect_to post_group_messages_path(@post.id, @group.id)  }
+        format.json
+      end
       
-      redirect_to post_group_messages_path(@post.id, @group.id)
     
     else
       @messages = @group.messages.includes(:user)
