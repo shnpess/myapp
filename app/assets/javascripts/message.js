@@ -1,13 +1,28 @@
 $(function(){ 
   function buildHTML(message){
+    if ( message.image ) {
      var html =
      `<div class="chat__message">
      ${message.content}
      ${message.user_name}
      ${message.created_at}
+     
+     
      </div>`
      return html;
+    } else {
+      var html =
+      `<div class="chat__message">
+     ${message.content}
+     ${message.user_name}
+     ${message.created_at}
+    
+     </div>`
+     return html;
+    };
   }
+
+
 
 
      $('#new__message').on('submit', function(e){
