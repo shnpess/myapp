@@ -1,10 +1,16 @@
 class MessagesController < ApplicationController
   before_action :set_group
-
+  before_action :authenticate_user!
 
   def index
-    @message = Message.new
-    @messages = @group.messages.includes(:user)
+    if @group.users.ids.include?(current_user.id)
+      @message = Message.new
+      @messages = @group.messages.includes(:user)
+      
+    else
+      flash[:alert] = '権限がありません。'
+      redirect_to posts_path
+    end
   end
 
   def create
@@ -33,6 +39,7 @@ class MessagesController < ApplicationController
   def set_group
     @group = Group.find(params[:group_id])
     @post = Post.find(params[:post_id])
+    
   end
 
 end

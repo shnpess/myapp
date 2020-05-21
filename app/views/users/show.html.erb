@@ -30,6 +30,9 @@
             <div class="post__content__right__part">
               年齢：<%= post.age %>
             </div>
+            <div class="post__content__right__part">
+              出身：<%= post.user.addres %>
+            </div>
           </div>
           <div class="ma">
             <div class="post__content__right__part">
@@ -46,7 +49,7 @@
       </div>
       <div class="post__content__bottom">
         <div class="post__content__left__part">
-          <%= post.content %>
+          <%= simple_format post.content %>
         </div>
       </div>
 
