@@ -8,8 +8,8 @@ class Post < ApplicationRecord
   has_many :groups
   def self.search(search)
     return Post.all unless search
-    Post.where(['gender LIKE ? OR content LIKE ? OR name LIKE ? OR age LIKE ? OR vaccination LIKE ?', "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%"])
-    # User.where( 'addres LIKE ?',  "%#{search}%" )
+    Post.joins(:user).where(['gender LIKE ? OR content LIKE ? OR name LIKE ? OR age LIKE ? OR vaccination LIKE ? OR addres LIKE ?', "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%"])
+   
   end
 
 

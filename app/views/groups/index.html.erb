@@ -33,6 +33,9 @@
               <div class="post__content__right__part">
                 年齢：<%= group.post.age %>
               </div>
+              <div class="post__content__right__part">
+              出身：<%= group.post.user.addres %>
+            </div>
             </div>
             <div class="ma">
               <div class="post__content__right__part">
@@ -50,7 +53,7 @@
 
         <div class="post__content__bottom">
           <div class="post__content__left__part">
-            <%= group.post.content %>
+            <%= simple_format group.post.content %>
             
           </div>
         </div>   

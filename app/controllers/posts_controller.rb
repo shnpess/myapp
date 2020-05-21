@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
 
+  before_action :authenticate_user!, except: :index
+
   def index
     @posts = Post.includes(:user).order("created_at DESC")
     @post = Post.new
@@ -37,7 +39,7 @@ class PostsController < ApplicationController
     @post.update(post_params)
     if @post.save
     flash[:notice] = "編集完了しました"
-    redirect_to posts_path
+    redirect_to post_path(@post.id)
     else
       flash.now[:alert] = "編集に失敗しました"
       render ("posts/edit")
