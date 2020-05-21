@@ -21,12 +21,12 @@ $(function() {
       if (input.files && input.files[0]) {
       var reader = new FileReader();
       reader.onload = function (e) {
-  $('#img_prev').attr('src', e.target.result).css('display', 'block');
+  $('#img_prevs').attr('src', e.target.result).css('display', 'block');
       }
       reader.readAsDataURL(input.files[0]);
       }
   }
-  $("#user_image").change(function(){
+  $("#user_picture").change(function(){
       readURL(this);
   });
   });

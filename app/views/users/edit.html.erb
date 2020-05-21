@@ -12,22 +12,23 @@
   <%= form_with(model: @user, local: true) do |form| %>
     <div class="form__contents">
       <% if @user.picture.present? %>
-        <%= image_tag @user.picture.url, id: :img_prev %>
+        <%= image_tag @user.picture.url, id: "img_prevs" %>
       <% else %>
-        <%= image_tag "", id: :img_prev, alt: "画像がありません"  %>
+        <%= image_tag "", id: "img_prevs", alt: "画像がありません"  %>
       <% end %>
-      <%= form.label :image, class: "form__image" do %> 
+      <%= form.label :picture, class: "form__image" do %> 
         <i class="fas fa-image fa-2x"></i>
-        <%= form.file_field :image %>
+        <%= form.file_field :picture %>
         <span class="form__image__text">プロフィール画像を変更する</span>
       <% end %> 
   
-      <%= form.text_field :nickname, placeholder: "＃Nickname", class: "form__string" %>
-      <%= form.text_field :addres, placeholder: "住所(都道府県のみ)", class: "form__string" %>
-      <%= form.text_field :email, placeholder: "＃Email", class: "form__string" %>
-      <%= form.text_area :profile, placeholder: "＃自己紹介" , rows: "5", class: "form__content" %>
+      <span><%= form.text_field :nickname, placeholder: "＃Nickname", class: "form__string" %></span>
+      <span><%= form.text_field :addres, placeholder: "住所(都道府県のみ)", class: "form__string" %></span>
+      <span><%= form.text_field :email, placeholder: "＃Email", class: "form__string" %></span><br>
+      <span><%= form.text_area :profile, placeholder: "＃自由にどうぞ" , rows: "5", class: "form__content" %></span>
       
       <%= form.submit "SEND", class: "send__btn" %>
     </div>
   <% end %>
 </div>
+

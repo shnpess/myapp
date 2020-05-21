@@ -73,16 +73,26 @@
 
   <div class="comment__container">
     <div class="comments">
-      <h4>＜コメント一覧＞</h4>
+      <h4 class="comment__index">＜コメント一覧＞</h4>
       <% if @comments %>
         <% @comments.each do |comment| %>
-        <div class="comment__part">
-          <p>
-            <div class="create__time"><%= comment.created_at.strftime("%Y-%m-%d %H:%M:%S") %></div>
-            <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
-            <%= comment.text %>
-          </p>
+        
+
+        <div class="comment__left">
+      <%= image_tag comment.user.picture.url, id: "comment__left__user__image" %>
+      <div class="comment__message__left__content">
+      <%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>:
+        <%= comment.text %> 
+      
+      </div>
+    </div>
+        <div class="comment__left__created">
+        <%= comment.created_at.strftime("%m月%d日 %H時%M分") %>
         </div>
+
+
+
+
         <% end %>
       <% end %>
     </div>

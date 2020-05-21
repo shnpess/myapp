@@ -1,9 +1,20 @@
 .group__content {
   display: flex;
   flex-direction: column;
+  padding: 10px;
+
 }
 
 .group__name {
-  font-size: 16px;
   margin-top: 20px;
+  color: #232323;
+  background: #fff8e8;
+  border-left: solid 10px #ffc06e;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.group__name__head {
+  font-size: 26px;
+  font-weight: bold;
 }
