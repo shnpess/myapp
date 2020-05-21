@@ -1,10 +1,63 @@
 
 <div class="group__content">
-<% current_user.groups.each do |group| %>
+<% @groups.each do |group| %>
   <div class="group__name">
   <%= link_to post_group_messages_path(group.post_id, group.id) do%>
-  <%= group.name %>
+  <span class="group__name__head"><%= group.name %></span><br>
+  更新日時: <%= group.updated_at.strftime("%Y-%m-%d %H:%M:%S") %>
+  <div class="posts">
+      <div class="post__content">
+        <div class="post__content__upper">
+          <div class="user__info">
+          <%= image_tag group.post.user.picture.url, class: "post__user__image" %>
+          
+          <%= group.post.user.nickname %>さんの投稿
+          
+          </div>
+          <%= group.post.created_at.strftime("%Y-%m-%d %H:%M:%S") %>
+        </div>
+
+        <div class="post__content__middle">
+          <div class="post__content__image">
+            <%= image_tag group.post.image.url, class: "post__image" %>
+          </div>
+
+          <div class="post__content__right">
+            <div class="ma">
+              <div class="post__content__right__part">
+                名前：<%= group.post.name %>
+              </div>
+              <div class="post__content__right__part">
+                種類：<%= group.post.kind %>
+              </div>
+              <div class="post__content__right__part">
+                年齢：<%= group.post.age %>
+              </div>
+            </div>
+            <div class="ma">
+              <div class="post__content__right__part">
+                性別：<%= group.post.gender %>
+              </div>
+              <div class="post__content__right__part">
+                予防接種：<%= group.post.vaccination %>
+              </div>
+              <div class="post__content__right__part">
+                性格：<%= group.post.character %>
+              </div>
+            </div>  
+          </div>
+        </div>
+
+        <div class="post__content__bottom">
+          <div class="post__content__left__part">
+            <%= group.post.content %>
+            
+          </div>
+        </div>   
+      </div>
   </div>
+
 <% end %>
+</div>
 <% end %>
 </div>
