@@ -5,6 +5,7 @@ class PostsController < ApplicationController
   def index
     @posts = Post.includes(:user).order("created_at DESC")
     @post = Post.new
+    @categories = Category.where("id <= ?", 3)
     
   end
 
@@ -61,7 +62,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:name, :age, :vaccination, :kind, :gender, :character, :image, :content).merge(user_id: current_user.id)
+    params.require(:post).permit(:name, :age, :vaccination, :kind, :gender, :character, :image, :content, category_ids: []).merge(user_id: current_user.id)
   
   end
 end
