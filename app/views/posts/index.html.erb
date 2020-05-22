@@ -88,6 +88,12 @@
                   
                 <span>名前: <%= form.text_field :name, placeholder: "例)太郎",class: "form__string" %></span>
                 <span>種類: <%= form.text_field :kind, placeholder: "例)アメショ", class: "form__string" %></span>
+               <%= form.collection_select :category_ids, @categories, :id, :name %>
+              
+
+
+
+
                 <span>年齢: <%= form.text_field :age, placeholder: "例)1歳、子犬など", class: "form__string" %></span>
                 <div class="form__string__radio">
                 性別: <%= form.radio_button :gender, :"オス" %>

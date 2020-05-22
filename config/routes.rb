@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     collection do
       get 'search'
     end
-    resources :comments, only: :create
+    resources :comments, only: [:create, :destroy]
     resources :groups, only: :create do
       resources :messages, only: [:index, :create]
       namespace :api do
@@ -14,5 +14,5 @@ Rails.application.routes.draw do
     end
   end
   resources :users, only: [:show, :index, :edit, :update]
-  resources :groups, only: :index
+  resources :groups, only: [:index, :destroy]
   end
