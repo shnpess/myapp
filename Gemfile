@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-
+gem 'rails', '~> 5.2.3'
 # Use mysql as the database for Active Record
 
 # Use Puma as the app server
@@ -44,7 +44,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-rails'
-  gem 'rails', '~> 5.2.3'
+  
   gem 'mysql2', '>= 0.4.4', '< 0.6.0'
 end
 
