@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
-  
+  before_action :category_action, only: :show
   def index
     @users = User.all
     
