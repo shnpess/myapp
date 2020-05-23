@@ -60,7 +60,7 @@
 
 
 
-<div class="container text-center">
+<div class="container">
   <button type="button" class="post__logo" data-toggle="modal" data-target="#post">投稿</button>
   <div class="modal fade" id="post" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -79,19 +79,18 @@
                   <%= form.file_field :image %>
                   <span class="form__image__text">画像を追加する</span>
                 <% end %> 
-                <span>名前: <%= form.text_field :name, placeholder: "例)太郎",class: "form__string" %></span>
-                <span>種類: <%= form.text_field :kind, placeholder: "例)アメショ", class: "form__string" %></span>
-                <div class="form__string__radio">
-                性別: <%= form.radio_button :gender, :"オス" %>
-                <%= form.label :gender, "オス", {value: :"オス", style: "display: inline-block;"} %>
-                <%= form.radio_button :gender, :"メス" %>
-                <%= form.label :gender, "メス", {value: :"メス", style: "display: inline-block;"} %>
-                
-                </div>
-                <span>性格: <%= form.text_field :character, placeholder: "例)やんちゃ",class: "form__string" %></span>
-                <span>　　  <%= form.text_area :content, placeholder: "好きなコメントをどうぞ！", class: "form__content" %></span>
+                  
+                <div class="form__area">名前: <%= form.text_field :name, placeholder: "例)太郎"%></div>
+                <div class="form__area">種類: <%= form.collection_select :kind, @category_kind, :name, :name, prompt: "選択してください" %></div>
+                <div class="form__area">年齢: <%= form.collection_select :age, @category_age, :name, :name, prompt: "選択してください" %></div>
+                <div class="form__area">性別: <%= form.collection_select :gender, @category_gender, :name, :name, prompt: "選択してください" %></div>
+                <div class="form__area">ﾜｸﾁﾝ: <%= form.collection_select :vaccination, @category_vaccination, :name, :name, prompt: "選択してください" %></div>
+                <div class="form__area">性格: <%= form.collection_select :character, @category_character, :name, :name, prompt: "選択してください" %></div>
+                <div class="form__area"> <%= form.text_area :content, placeholder: "好きなコメントをどうぞ！", class: "form__content" %></div>
+               <div class="footer__btn">
                 <%= form.submit "SEND", class: "send__btn" %>
                 <button type="button" class="close__btn" data-dismiss="modal">閉じる</button>
+               </div> 
             </div>
           <% end %>
         </div>
