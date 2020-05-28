@@ -22,7 +22,7 @@
           <ul>
             <% if user_signed_in? %>
             
-            <%= link_to about_me_index_path do %>
+            <%= link_to helps_path(anchor: "developer__profile") do %>
               <li><i class="far fa-user"></i> About me</li>
             <% end %>
             <% unless current_user.nickname == "ゲスト" %>
@@ -79,7 +79,9 @@
               <% end %>
             </div>
             <div class="left__content">
+            <%= link_to helps_path do %>
               <i class="fas fa-paw"></i> ヘルプ
+             <% end %>
             </div>
           <% end %>
         </div>

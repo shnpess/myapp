@@ -14,10 +14,7 @@
   font-size: 40px;
   font-weight: bold;
   margin: 50px;
-  background: #fffde8;
-  box-shadow: 0px 0px 0px 10px #fffde8;/*線の外側*/
-  border: dashed 2px #ffb03f;/*破線*/
-  border-radius: 9px;
+  
   text-align: center;
   padding: 20px;
 }
@@ -32,24 +29,32 @@
 .profile__content {
   display: flex;
   border: 5px solid #00bfff;
-  border-radius: 3%;
+  border-radius: 10px;
   padding: 30px;
   background-color: #fff;
+  width: 900px;
+  
 }
 
 .profile__table {
   display: flex;
   flex-direction: column;
+  margin-left: 20px;
 }
 .profile__table {
  font-size: 18px;
 
  .profile__history p {
-   margin: 5px;
+   margin: 20px;
  }
+}
+
+.profile__name {
+  margin-left: 20px;
 }
 
 .profile--bold {
   font-weight: bold;
   font-size: 20px;
+  
 }
