@@ -16,20 +16,30 @@
         <h1>Hello Cat!</h1>
         <div class="left__wrapper__link">
           <%= image_tag "cat01.png", class: "top-logo" %>
-          <%= link_to "Sign Up", new_user_registration_path, class: "left__wrapper__link--white" %>
-          <%= link_to "Log In", new_user_session_path, class: "left__wrapper__link--blue" %>
-          <%= link_to 'かんたんログイン', top_guest_sign_in_path, method: :post, class: "left__wrapper__link--gray" %>
+          <%= link_to "新規登録", new_user_registration_path, class: "left__wrapper__link--white" %>
+          <%= link_to "ログイン", new_user_session_path, class: "left__wrapper__link--blue" %>
+        </div>
+        <div class="sub__contents">
+          <%= link_to top_guest_sign_in_path, method: :post do %>
+            <i class="fas fa-paw">かんたんログイン</i>
+          <% end %>
+          <%= link_to posts_path do %>
+            <i class="fas fa-paw">投稿一覧を見てみる</i>
+          <% end %>
+          <%= link_to top_guest_sign_in_path, method: :post do %>
+            <i class="fas fa-paw">Hello Cat!について</i>
+          <% end %>
           
         </div>
       </div>
 
       <div class="right__wrapper">
         <div class="right__wrapper__text">
-          <h2>全ての猫を幸せにするアプリ</h2>
+          <h2>全ての猫を幸せにする里親探しアプリ</h2>
           <ul>
-            <li class="right__wrapper__list"><i class="fas fa-paw"></i>  日々の愛猫の成長記録</li>
-            <li class="right__wrapper__list"><i class="fas fa-paw"></i>  毎日のご飯の管理に</li>
-            <li class="right__wrapper__list"><i class="fas fa-paw"></i>  健康管理も欠かさない</li>
+            <li class="right__wrapper__list"><i class="fas fa-paw"></i>  条件を指定して気になる猫を探せる</li>
+            <li class="right__wrapper__list"><i class="fas fa-paw"></i>  チャットを使ったやりとり</li>
+            <li class="right__wrapper__list"><i class="fas fa-paw"></i>  コメント機能を使ったユーザー同士のやりとり</li>
           </ul>
         </div>
         <div class="right__wrapper__image">

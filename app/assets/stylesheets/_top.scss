@@ -48,10 +48,11 @@
 }
 .left__wrapper {
   @include half-wrapper;
+  
 
   &__link  {
     width: 80%;
-    height: 80px;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -155,5 +156,15 @@
   color: gray;
 }
 
+.sub__contents {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 30px;
+  font-size: 18px;
+}
 
-
+.sub__contents a {
+  margin-top: 10px;
+}
