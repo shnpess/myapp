@@ -1,1 +1,55 @@
 
+.profile {
+  
+}
+
+.profile__contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile__title {
+  width: 50%; 
+  font-size: 40px;
+  font-weight: bold;
+  margin: 50px;
+  background: #fffde8;
+  box-shadow: 0px 0px 0px 10px #fffde8;/*線の外側*/
+  border: dashed 2px #ffb03f;/*破線*/
+  border-radius: 9px;
+  text-align: center;
+  padding: 20px;
+}
+.profile__image {
+  width: 300px;
+  height: 300px;
+  border-radius: 30%;
+  margin: 30px;
+
+}
+
+.profile__content {
+  display: flex;
+  border: 5px solid #00bfff;
+  border-radius: 3%;
+  padding: 30px;
+  background-color: #fff;
+}
+
+.profile__table {
+  display: flex;
+  flex-direction: column;
+}
+.profile__table {
+ font-size: 18px;
+
+ .profile__history p {
+   margin: 5px;
+ }
+}
+
+.profile--bold {
+  font-weight: bold;
+  font-size: 20px;
+}
