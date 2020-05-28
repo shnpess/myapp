@@ -18,7 +18,7 @@
           <%= image_tag "cat01.png", class: "top-logo" %>
           <%= link_to "Sign Up", new_user_registration_path, class: "left__wrapper__link--white" %>
           <%= link_to "Log In", new_user_session_path, class: "left__wrapper__link--blue" %>
-          <a href="#" class="left__wrapper__test">Test Log In</>
+          <%= link_to 'かんたんログイン', top_guest_sign_in_path, method: :post, class: "left__wrapper__link--gray" %>
           
         </div>
       </div>
@@ -37,6 +37,7 @@
           <%= image_tag "cat02.png", class: "right-image" %>
           <%= image_tag "cat04.png", class: "right-image" %>
         </div>
+        
       </div>
     </div>
   </body>
