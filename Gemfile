@@ -80,6 +80,6 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'devise'
 gem 'jquery-rails'
-gem "bootstrap-sass", "~>3.3.6"
+gem "bootstrap-sass", "~>3.4.1"
 gem "jquery-ui-rails"
 gem 'fog-aws'
