@@ -23,7 +23,7 @@
           <ul>
             <% if user_signed_in? %>
             
-            <%= link_to "#",  method: :delete do %>
+            <%= link_to about_me_index_path do %>
               <li><i class="far fa-user"></i> About me</li>
             <% end %>
             <% unless current_user.nickname == "ゲスト" %>
