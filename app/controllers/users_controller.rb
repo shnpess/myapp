@@ -14,10 +14,10 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
-    # if current_user.nickname == "ゲスト"
-    #   flash.now[:alert] = "権限がありません"
-    #   redirect_to posts_path
-    # end
+    if current_user.nickname == "ゲスト"
+      flash.now[:alert] = "権限がありません"
+      redirect_to posts_path
+    end
   end
 
   def update
