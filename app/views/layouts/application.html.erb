@@ -26,13 +26,13 @@
             <%= link_to "#",  method: :delete do %>
               <li><i class="far fa-user"></i> About me</li>
             <% end %>
-            <% unless current_user.nickname == "ゲスト" %>
+           
             <%= link_to edit_user_path(current_user.id) do %>
               <li><i class="fas fa-cog"></i> Setting</li>
             <% end %>
-            <% else %>
+            
             <p class="guest">※ゲストユーザーのためユーザー編集機能を制限しています</p>
-            <% end %>
+            
 
             <%= link_to destroy_user_session_path, method: :delete do %> 
               <li><i class="fas fa-sign-out-alt"></i> Log Out</li>
