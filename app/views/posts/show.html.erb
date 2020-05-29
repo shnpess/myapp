@@ -1,3 +1,6 @@
+<div class="my__page">
+  <i class="fas fa-paw"> <%= @post.user.nickname %>さんの投稿詳細</i>
+</div>
 <div class="edit">
 <% if user_signed_in? && current_user.id == @post.user_id %>
   <%= link_to post_path(@post.id), method: :delete do %>
@@ -20,7 +23,7 @@
         <%= image_tag @post.user.picture.url, class: "post__user__image" %>
         <%= @post.user.nickname %>さんの投稿
         </div>
-        <%= @post.created_at %>
+        <%= @post.created_at.strftime("%Y-%m-%d %H:%M:%S") %>
       </div>
 
       <div class="post__content__middle">
