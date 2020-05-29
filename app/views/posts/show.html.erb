@@ -67,7 +67,9 @@
       </div>
       <div class="chat__form">
       <%= form_with(model: [@post, @group], local: true) do |form| %>
+      
       <%= form.submit "#{@post.user.nickname}さんとチャットする", class: "chat__send" %>
+      
       <% end %>
       </div>
   </div>
@@ -79,7 +81,8 @@
 
   <div class="comment__container">
     <div class="comments">
-      <h4 class="comment__index">＜コメント一覧＞</h4>
+
+      <h4 class="comment__index"><i class="fas fa-paw"> コメント一覧</i></h4>
       <% if @comments %>
         <% @comments.each do |comment| %>
         

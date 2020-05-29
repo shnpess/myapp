@@ -6,7 +6,7 @@
   <div class="group__name">
   <%= link_to post_group_messages_path(group.post_id, group.id) do%>
   <span class="group__name__head"><%= group.name %></span><br>
-  更新日時: <%= group.updated_at.strftime("%Y-%m-%d %H:%M:%S") %>
+  <span class="group__create__time">更新日時: <%= group.updated_at.strftime("%Y-%m-%d %H:%M:%S") %></span>
   <div class="posts">
       <div class="post__content">
         <div class="post__content__upper">
