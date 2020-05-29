@@ -1,7 +1,7 @@
 .group__content {
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 20px;
 
 }
 
@@ -12,9 +12,15 @@
   border-left: solid 10px #ffc06e;
   border-radius: 10px;
   padding: 20px;
+  margin-left: 80px;
 }
 
 .group__name__head {
   font-size: 26px;
   font-weight: bold;
+  margin-left: 20px;
+}
+.group__create__time {
+  margin-left: 20px;
+
 }
