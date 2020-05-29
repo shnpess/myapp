@@ -18,10 +18,27 @@
         </div>
         <% end %>  
 
+
+        <div class="serch__content">
+        <%= form_with(url: search_posts_path, local: true, method: :get, class: "search__form") do |form| %>
+          <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search__form__input" %>
+          <%= button_tag type: 'submit', class: 'btn btn-default search_btn' do %>
+          <i class="fas fa-search"></i>
+          <% end %>
+        <% end %>
+        </div>
+
         <div class="header__list">
           <ul>
             <% if user_signed_in? %>
-            
+
+            <%= link_to user_path(current_user.id) do %>
+              <li>
+              <%= image_tag current_user.picture.url, class: "header__user__image" %>
+              <%= current_user.nickname %>さん
+              </li>
+            <% end %>
+
             <%= link_to helps_path(anchor: "developer__profile") do %>
               <li><i class="far fa-user"></i> About me</li>
             <% end %>
@@ -55,35 +72,33 @@
       <%# サイドバー %>
       <div class="main__contents">
         <div class="left__contents">
-          <div class="left__content">
-            <%= link_to posts_path do %>
-              <div class="left__content__index">
-              <i class="fas fa-paw"></i> 投稿一覧
-              </div>
+          
+            <%= link_to posts_path, class: "left__content" do %>
+              <i class="fas fa-paw"> 投稿一覧</i> 
             <% end %>
-          </div>
+         
           <% if user_signed_in? %>
-          <div class="left__content">
-            <%= link_to user_path(current_user.id) do %>
-              <i class="fas fa-paw"></i> マイページ
+          
+            <%= link_to user_path(current_user.id), class: "left__content" do %>
+              <i class="fas fa-paw"> マイページ</i> 
             <% end %>
-          </div>
-            <div class="left__content">
-              <%= link_to users_path do %>
-                <i class="fas fa-paw"></i> ユーザー
+         
+            
+              <%= link_to users_path, class: "left__content" do %>
+                <i class="fas fa-paw"> ユーザー</i> 
               <% end %>
-            </div>
-            <div class="left__content">
-              <%= link_to groups_path do %>
-                <i class="fas fa-paw"></i> チャット一覧
+            
+           
+              <%= link_to groups_path, class: "left__content" do %>
+                <i class="fas fa-paw"> チャット一覧</i> 
               <% end %>
-            </div>
-            <div class="left__content">
-            <%= link_to helps_path do %>
-              <i class="fas fa-paw"></i> ヘルプ
-             <% end %>
-            </div>
+            
           <% end %>
+            
+            <%= link_to helps_path, class: "left__content" do %>
+              <i class="fas fa-paw"> Hello Cat!</i> 
+             <% end %>
+          
         </div>
         <div class="right__contents">
           <div class="right__content">

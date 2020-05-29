@@ -56,6 +56,17 @@
     font-weight: bold;
   }
 
+ 
+
+}
+
+.header__user__image {
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  line-height: 0;
+  margin-bottom: 30px;
+  
 }
 
 .main__contents {
@@ -74,21 +85,25 @@
 
 
   .left__content  {
+    // background: linear-gradient(transparent 80%, #c2e0fa 70%);
+    border-bottom: 3px dashed black;
     font-size: 20px;
     margin-top: 30px;
-    width: 100%;
+    width: 90%;
     height: 50px;
-    background-color: #fff;
-    border-radius: 10px;
+    // background-color: #fff;
+    // border-radius: 10px;
     font-weight: bold;
     line-height: 50px;
-    text-align: center;
-    margin: 20px 0;
-    color: black;
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+    text-align: left;
+    margin: 50px 0 0 50px;
+    color: #744c3a;
+    font-size: 22px;
+    // box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
     
   }
 }
+
 
 .right__contents {
   width: calc(100vw - 250px);
@@ -111,7 +126,8 @@
     background-color: #FF9933;
     border-radius: 10px;
     font-weight: bold;
-    line-height: 50px;
+    line-height: 45px;
+    font-size: 18px;
     text-align: center;
     text-decoration: none;
     margin: 20px 0;
@@ -136,11 +152,10 @@
     box-shadow: 0px 0px 0px 10px #fffde8;/*線の外側*/
     border: dashed 2px #ffb03f;/*破線*/
     border-radius: 9px;
-    margin-top: 100px;
+    margin:30px 0 50px 0;
     display: flex;
     flex-direction: column;
     color: black;
-    // margin-left: 30px;
     padding: 40px;
     position: relative;
     
@@ -153,6 +168,7 @@
       
       .nickname {
         font-size: 18px;
+        
       }
       
       .post__user__image {
