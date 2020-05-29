@@ -3,16 +3,17 @@
 }
 
 
-.chat__content {
+.chat__message__content {
   display: flex;
   flex-direction: column;
   font-size: 26px;
-  
+
 }
 
 .chat__message__right {
   display: flex;
   flex-direction: row-reverse;
+
 }
 .chat__message__right__content {
   position: relative;
@@ -55,14 +56,14 @@
 .chat__message__left {
  display: flex;
  flex-direction: row;
-  
+
 }
 
 .chat__message__left__content  {
-  
+
   position: relative;
   display: inline-block;
-  
+
   padding: 15px;
   max-width: 100%;
   color: #555;
@@ -95,9 +96,4 @@
   margin-right: 20px;
   border-radius: 10px;
 }
-
-
-
-
-
 
