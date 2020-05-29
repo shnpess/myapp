@@ -87,26 +87,26 @@
 
 
 .my__page {
-  width: 70%;
-  font-size: 30px;
-  background: #fffde8;
-    box-shadow: 0px 0px 0px 10px #fffde8;/*線の外側*/
-    border: dashed 2px #ffb03f;/*破線*/
-  border-radius: 9px;
-  text-align: center;
-  margin: 0 auto;
+  border-bottom: 3px dashed black;
+  margin: 30px 0 20px 100px;
+  height: 50px;
+  font-weight: bold;
+  line-height: 50px;
+  color: #744c3a;
+  font-size: 24px;
+  width: 30%;
+
 }
 .setting__page {
-  width: 50%;
+  border-bottom: 3px dashed black;
   font-size: 20px;
-  background: #fffde8;
-    box-shadow: 0px 0px 0px 10px #fffde8;/*線の外側*/
-    border: dashed 2px #ffb03f;/*破線*/
-  border-radius: 9px;
-  text-align: center;
-  margin: 0 auto;
-  margin-top: 20px;
-  margin-bottom: 30px;
+  margin: 30px 0 20px 30px;
+  height: 50px;
+  font-weight: bold;
+  line-height: 50px;
+  color: #744c3a;
+  font-size: 22px;
+  width: 30%;
 }
 
 .edit__btn {
