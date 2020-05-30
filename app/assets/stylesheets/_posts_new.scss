@@ -26,6 +26,7 @@
       @include form__part;
       height: 140px;
       margin-bottom: 20px;
+      padding: 10px;
     }
 
     .form__image {
@@ -46,7 +47,9 @@
   }
 }
 
-
+.form__area {
+  padding: 10px;
+}
 
 
 
@@ -59,7 +62,7 @@
   // box-shadow: 0px 0px 0px 10px #fffde8;/*線の外側*/
   // border: dashed 2px #ffb03f;/*破線*/
   padding: 20px;
-  margin: 10px auto;
+ margin: 20px;
 }
 
 #img_prevs {
@@ -71,7 +74,7 @@
   // box-shadow: 0px 0px 0px 10px #fffde8;/*線の外側*/
   // border: dashed 2px #ffb03f;/*破線*/
   padding: 20px;
-  margin: 10px auto;
+  margin: 20px;
 
 }
 

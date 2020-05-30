@@ -5,17 +5,22 @@
   padding: 20px;
   
 }
-
+.user__form {
+  padding: 50px;
+  background-color: #ffddbc;
+}
 .form__contents--center {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
 
-  .form__content {
-    @include form__part;
-    width: 300px;
+  .user__form__content {
+    
+    width: 50%;
     height: 140px;
     margin-bottom: 20px;
+    padding: 10px;
+
   }
 
   .form__image {
@@ -75,6 +80,8 @@
   margin-top: 30px;
   border-radius: 10px;
   height: 40px;
+  width: 40%;
+  padding: 10px;
 }
 
 
@@ -121,6 +128,7 @@
   text-decoration: none;
   color: white;
   box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+  margin-left: 100px;
 }
 
 .user__content__right__part {
