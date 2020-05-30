@@ -2,6 +2,7 @@ class PostsController < ApplicationController
 
   before_action :authenticate_user!, except: :index
   before_action :category_action, only: [:index, :edit, :new, :create]
+  
 
   def index
     @posts = Post.includes(:user).order("created_at DESC")
@@ -32,6 +33,10 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
+    unless @post.user.id == current_user.id
+      redirect_to posts_path
+      flash[:alert] = "権限がありません"
+    end
   end
 
   def update
@@ -47,7 +52,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    post = Post.find(params[:id])
+    @post = Post.find(params[:id])
     post.destroy
     flash[:notice] = "投稿を削除しました"
     redirect_to posts_path
@@ -64,6 +69,8 @@ class PostsController < ApplicationController
     params.require(:post).permit(:name, :age, :vaccination, :kind, :gender, :character, :image, :content, :category_ids).merge(user_id: current_user.id)
   
   end
+
+  
 
   
 end
