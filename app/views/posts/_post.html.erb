@@ -1,0 +1,58 @@
+<div class="posts">
+  <% @posts.each do |post| %>
+  <%= link_to post_path(post.id), id: "links" do %>
+    <div class="post__content">
+      <div class="post__content__upper">
+        <div class="user__info">
+        
+        <%= image_tag post.user.picture.url, class: "post__user__image" %>
+        <%= post.user.nickname %>さんの投稿
+        
+        </div>
+        <%= post.created_at.strftime("%Y-%m-%d %H:%M:%S") %>
+      </div>
+
+      <div class="post__content__middle">
+        <div class="post__content__image">
+          <%= image_tag post.image.url, class: "post__image" %>
+        </div>
+
+        <div class="post__content__right">
+          <div class="ma">
+            <div class="post__content__right__part">
+             <i class="fas fa-paw"> 名前：<%= post.name %></i>
+            </div>
+            <div class="post__content__right__part">
+            <i class="fas fa-paw">  種類：<%= post.kind %></i>
+            </div>
+            <div class="post__content__right__part">
+             <i class="fas fa-paw"> 年齢：<%= post.age %></i>
+            </div>
+            <div class="post__content__right__part">
+             <i class="fas fa-paw"> 出身：<%= post.user.addres %></i>
+            </div>
+          </div>
+          <div class="ma">
+            <div class="post__content__right__part">
+             <i class="fas fa-paw"> 性別：<%= post.gender %></i>
+            </div>
+            <div class="post__content__right__part">
+             <i class="fas fa-paw"> ﾜｸﾁﾝ：<%= post.vaccination %></i>
+            </div>
+            <div class="post__content__right__part">
+             <i class="fas fa-paw"> 性格：<%= post.character %></i>
+            </div>
+          </div>  
+        </div>
+      </div>
+
+      <div class="post__content__bottom">
+        <div class="post__content__left__part">
+          <%= simple_format post.content %>
+          
+        </div>
+      </div>   
+    </div>
+  <% end %>
+  <% end %>
+</div>
