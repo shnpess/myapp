@@ -83,3 +83,4 @@ gem 'jquery-rails'
 gem "bootstrap-sass", "~>3.4.1"
 gem "jquery-ui-rails"
 gem 'fog-aws'
+gem 'kaminari'
