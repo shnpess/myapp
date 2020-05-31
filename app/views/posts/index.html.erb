@@ -26,7 +26,7 @@
                 <div class="form__area">性別: <%= form.collection_select :gender, @category_gender, :name, :name, prompt: "選択してください" %></div>
                 <div class="form__area">ﾜｸﾁﾝ: <%= form.collection_select :vaccination, @category_vaccination, :name, :name, prompt: "選択してください" %></div>
                 <div class="form__area">性格: <%= form.collection_select :character, @category_character, :name, :name, prompt: "選択してください" %></div>
-                <div class="form__area"> <%= form.text_area :content, placeholder: "好きなコメントをどうぞ！", class: "form__content" %></div>
+                <div class="form__area"> <%= form.text_area :content, placeholder: "好きなコメントをどうぞ！", class: "form__content", cols: 5 %></div>
                <div class="footer__btn">
                 <%= form.submit "SEND", class: "send__btn" %>
                 <button type="button" class="close__btn" data-dismiss="modal">閉じる</button>
