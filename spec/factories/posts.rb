@@ -1,6 +1,6 @@
 FactoryBot.define do
 
-  factory :user do
+  factory :post do
     name              {"ころ"}
     kind              {"アメリカンショートヘアー"}
     gender            {"オス"}
@@ -10,6 +10,14 @@ FactoryBot.define do
     image             {"猫1.jpg"}
     user_id           {1}
     content           {"テストテスト"}
+  end
+
+  factory :user do
+    nickname          {"mori"}
+    addres            {"福岡県"}
+    id                {"1"}
+    email             {"aaa@aaa"}
+    password          {"aaaaaa"}
   end
 
 end
