@@ -11,13 +11,4 @@ FactoryBot.define do
     user_id           {1}
     content           {"テストテスト"}
   end
-
-  factory :user do
-    nickname          {"mori"}
-    addres            {"福岡県"}
-    id                {"1"}
-    email             {"aaa@aaa"}
-    password          {"aaaaaa"}
-  end
-
 end
