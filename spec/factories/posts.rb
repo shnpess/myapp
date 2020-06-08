@@ -1,6 +1,6 @@
 FactoryBot.define do
 
-  factory :user do
+  factory :post do
     name              {"ころ"}
     kind              {"アメリカンショートヘアー"}
     gender            {"オス"}
@@ -11,5 +11,4 @@ FactoryBot.define do
     user_id           {1}
     content           {"テストテスト"}
   end
-
 end
