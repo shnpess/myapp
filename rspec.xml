@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="rspec" tests="17" skipped="0" failures="0" errors="0" time="0.218369" timestamp="2020-06-08T20:14:32+09:00" hostname="ShunnoMacBook-Pro.local">
+<properties>
+<property name="seed" value="31105"/>
+</properties>
+<testcase classname="spec.models.post_spec" name="Post#create 必須項目がすべて存在すれば登録できること" file="./spec/models/post_spec.rb" time="0.070197"></testcase>
+<testcase classname="spec.models.post_spec" name="Post#create 名前がない場合は登録できないこと" file="./spec/models/post_spec.rb" time="0.009170"></testcase>
+<testcase classname="spec.models.post_spec" name="Post#create 名前が8文字以上だと登録出来ないこと" file="./spec/models/post_spec.rb" time="0.008603"></testcase>
+<testcase classname="spec.models.post_spec" name="Post#create 名前が7文字の場合は登録出来ること" file="./spec/models/post_spec.rb" time="0.006035"></testcase>
+<testcase classname="spec.models.post_spec" name="Post#create contentが100文字以上だと登録出来ないこと" file="./spec/models/post_spec.rb" time="0.008556"></testcase>
+<testcase classname="spec.models.post_spec" name="Post#create contentが100文字の場合は登録出来ること" file="./spec/models/post_spec.rb" time="0.006190"></testcase>
+<testcase classname="spec.models.post_spec" name="Post#create contentがない場合は登録出来ないこと" file="./spec/models/post_spec.rb" time="0.007891"></testcase>
+<testcase classname="spec.models.user_spec" name="Post#create 必須項目がすべて存在すれば登録できること" file="./spec/models/user_spec.rb" time="0.005981"></testcase>
+<testcase classname="spec.models.user_spec" name="Post#create ニックネームがない場合は登録できないこと" file="./spec/models/user_spec.rb" time="0.004833"></testcase>
+<testcase classname="spec.models.user_spec" name="Post#create ニックネームが7文字以上の場合は登録できないこと" file="./spec/models/user_spec.rb" time="0.004953"></testcase>
+<testcase classname="spec.models.user_spec" name="Post#create ニックネームが6文字の場合は登録できること" file="./spec/models/user_spec.rb" time="0.005349"></testcase>
+<testcase classname="spec.models.user_spec" name="Post#create emailがない場合は登録できないこと" file="./spec/models/user_spec.rb" time="0.008256"></testcase>
+<testcase classname="spec.models.user_spec" name="Post#create プロフィールが71文字以上の場合は登録できないこと" file="./spec/models/user_spec.rb" time="0.007841"></testcase>
+<testcase classname="spec.models.user_spec" name="Post#create プロフィールが70文字以上の場合は登録できないこと" file="./spec/models/user_spec.rb" time="0.010306"></testcase>
+<testcase classname="spec.models.user_spec" name="Post#create passwordがない場合は登録できないこと" file="./spec/models/user_spec.rb" time="0.009168"></testcase>
+<testcase classname="spec.models.user_spec" name="Post#create passwordが5文字以下の場合は登録できないこと" file="./spec/models/user_spec.rb" time="0.025085"></testcase>
+<testcase classname="spec.models.user_spec" name="Post#create passwordが6文字の場合は登録できること" file="./spec/models/user_spec.rb" time="0.013357"></testcase>
+</testsuite>
