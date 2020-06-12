@@ -117,7 +117,7 @@
   background-color: #ffddbc;
 }
 
-.right__content {
+
   
 
   .post__logo {
@@ -138,7 +138,7 @@
     color: white;
     box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
   }
-}
+
 
 .posts {
   display: flex;
@@ -151,7 +151,7 @@
   
   .post__content {
     width: 65vw;
-    height: 60vh;
+    height: 100%;
     background: #fffde8;
     box-shadow: 0px 0px 0px 10px #fffde8;/*線の外側*/
     border: dashed 2px #ffb03f;/*破線*/
