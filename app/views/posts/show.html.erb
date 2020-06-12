@@ -17,8 +17,8 @@
 </div>
 
 <div class="posts">
-  <div class="post__content">
-    <div class="post__content__upper">
+    <div class="post__content">
+      <div class="post__content__upper">
         <div class="user__info">
         <%= image_tag @post.user.picture.url, class: "post__user__image" %>
         <%= @post.user.nickname %>さんの投稿
@@ -51,7 +51,7 @@
              <i class="fas fa-paw">  性別：<%= @post.gender %></i>
             </div>
             <div class="post__content__right__part">
-             <i class="fas fa-paw">  予防接種：<%= @post.vaccination %></i>
+             <i class="fas fa-paw">  ﾜｸﾁﾝ：<%= @post.vaccination %></i>
             </div>
             <div class="post__content__right__part">
              <i class="fas fa-paw">  性格：<%= @post.character %></i>
@@ -66,11 +66,9 @@
         </div>
       </div>
       <div class="chat__form">
-      <%= form_with(model: [@post, @group], local: true) do |form| %>
-      
-      <%= form.submit "#{@post.user.nickname}さんとチャットする", class: "chat__send" %>
-      
-      <% end %>
+        <%= form_with(model: [@post, @group], local: true) do |form| %>
+          <%= form.submit "#{@post.user.nickname}さんとチャットする", class: "chat__send" %>
+        <% end %>
       </div>
   </div>
 </div>
@@ -79,10 +77,10 @@
 
 
 
+      <h4 class="comment__index"><i class="fas fa-paw"> コメント一覧</i></h4>
   <div class="comment__container">
     <div class="comments">
 
-      <h4 class="comment__index"><i class="fas fa-paw"> コメント一覧</i></h4>
       <% if @comments %>
         <% @comments.each do |comment| %>
         
