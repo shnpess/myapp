@@ -23,7 +23,7 @@
         <%= image_tag @post.user.picture.url, class: "post__user__image" %>
         <%= @post.user.nickname %>さんの投稿
         </div>
-        <%= @post.created_at.strftime("%Y-%m-%d %H:%M:%S") %>
+        <%= @post.created_at.strftime("%m月%d日 %H:%M") %>
       </div>
 
       <div class="post__content__middle">
@@ -94,7 +94,7 @@
       </div>
     </div>
         <div class="comment__left__created">
-        <%= comment.created_at.strftime("%m月%d日 %H時%M分") %>
+        <%= comment.created_at.strftime("%m月%d日 %H:%M") %>
         </div>
 
 
