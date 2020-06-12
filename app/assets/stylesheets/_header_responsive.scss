@@ -1,0 +1,50 @@
+@media(max-width: 480px) {
+
+.header {
+  display: flex;
+
+  .serch__content {
+    display: none;
+  }
+
+  &__logo span {
+    color: #444;
+    font-size: 25px;
+    margin-top: 10px;
+    
+    // border-bottom: 1px solid #bfbfbf;
+      &:first-letter{
+      font-size: 35px;
+    }
+  }
+
+  &__logo img {
+    height: 50px;
+    width: 50px;
+    margin: 10px 5px 5px 10px;
+  }
+
+  &__list ul {
+    display: none;
+    
+  }
+  
+}
+
+
+  .main__contents {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+  }
+  .left__contents {
+    display: none;
+
+  }
+
+  .right__contents {
+    width: 100vw;
+    height: 100vh;
+  }
+  
+}
