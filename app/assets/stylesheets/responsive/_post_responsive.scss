@@ -151,4 +151,43 @@
   border-radius: 10px;
 }
 
+.chat__form {
+  position: relative;
+}
+
+.my__page {
+  margin: 20px;
+  font-size: 18px;
+  width: 90%;
+}
+
+.comment__input {
+  width: 60vw; 
+  font-size: 16px;
+  border-radius: 3px; 
+  border: 2px solid #ddd;
+  margin-right: 20px;
+  position: fixed;
+  bottom: 8px;
+  right: 110px;
+
+}
+
+.comment__send__btn {
+  position: fixed;
+  bottom: 8px;
+  right: 5px;
+}
+
+.comment__index {
+  margin-left: 30px;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.comments {
+  width: 85vw;
+  }
+
+
 }
