@@ -16,6 +16,8 @@
   background-color: #ffddbc;
   display: flex;
   justify-content: space-between;
+  position: fixed;
+  z-index: 100;
 
   &__logo {
     display: flex;
@@ -74,7 +76,8 @@
 
 .main__contents {
   display: flex;
-  
+  padding-top: 70px;
+  background-color: #ffddbc;
 }
 
 .left__contents {
