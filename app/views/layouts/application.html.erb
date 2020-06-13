@@ -19,6 +19,77 @@
         </div>
         <% end %>  
 
+        <%# ハンバーガーメニュー %>
+        <div class="navi__menu">
+          <div class="menu-btn">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </div>
+          <div class="menu">
+          <% if user_signed_in? %>
+            <div class="menu__item">
+              <%= link_to posts_path, class: "left__content" do %>
+              投稿一覧
+              <% end %>
+            </div>
+            <div class="menu__item">
+              <%= link_to user_path(current_user.id), class: "left__content" do %>
+              マイページ
+              <% end %>
+            </div>
+            <div class="menu__item">
+              <%= link_to users_path, class: "left__content" do %>
+                ユーザー
+              <% end %>
+            </div>
+            <div class="menu__item">
+             <%= link_to groups_path, class: "left__content" do %>
+               チャット一覧 
+              <% end %>
+            </div>
+            <div class="menu__item">
+              <% unless current_user.nickname == "ゲスト" %>
+              <%= link_to edit_user_path(current_user.id) do %>
+                Setting
+              <% end %>
+              <% end %>
+            </div>
+            <div class="menu__item">
+              <%= link_to helps_path, class: "left__content" do %>
+                Hello Cat! 
+              <% end %>
+            </div>
+            <div class="menu__item">
+              <%= link_to destroy_user_session_path, method: :delete do %> 
+                Log Out
+              <% end %>
+            </div>
+
+            <% else %>
+            <div class="menu__item">
+              <%= link_to new_user_session_path do %>
+               ログイン
+              <% end %>
+            </div>
+            <div class="menu__item">
+              <%= link_to new_user_registration_path do %>
+              新規登録
+              <% end %>
+            </div>
+            <div class="menu__item">
+              <%= link_to posts_path, class: "left__content" do %>
+              投稿一覧
+              <% end %>
+            </div>
+            <div class="menu__item">
+              <%= link_to helps_path, class: "left__content" do %>
+                Hello Cat! 
+              <% end %>
+            </div>
+            <% end %>
+          </div>
+        </div>
+
+        <%# ここまで %>
 
         <div class="serch__content">
         <%= form_with(url: search_posts_path, local: true, method: :get, class: "search__form") do |form| %>
@@ -98,7 +169,7 @@
             
             <%= link_to helps_path, class: "left__content" do %>
               <i class="fas fa-paw"> Hello Cat!</i> 
-             <% end %>
+            <% end %>
           
         </div>
         <div class="right__contents">

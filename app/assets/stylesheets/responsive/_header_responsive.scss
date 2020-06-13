@@ -1,3 +1,7 @@
+.navi__menu {
+  display: none;
+}
+
 @media(max-width: 480px) {
 
 .header {
@@ -47,5 +51,65 @@
     height: 100vh;
     padding: 5px;
   }
+  /*----------------------------
+  * navi_menu
+  *----------------------------*/
+ 
+  .navi__menu {
+    display: block;
+  }
+
+  .menu-btn{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 150;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffddbc;
+    color: black;
+    border: 2px solid black;
+  }
   
+  .menu{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 110;
+    width: 40vw;
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fffde8;
+    opacity: 0.9;
+    
+  }
+  .menu__item{
+    width: 100%;
+    height: auto;
+    padding: .5em 1em;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  /*----------------------------
+  * アニメーション部分
+  *----------------------------*/
+  
+  /* アニメーション前のメニューの状態 */
+  .menu{
+    transform: translateX(100vw);
+    transition: all .3s linear;
+  }
+  /* アニメーション後のメニューの状態 */
+  .menu.is-active{
+    transform: translateX(0);
+  }
+
 }
