@@ -6,7 +6,7 @@
   <div class="group__name">
   <%= link_to post_group_messages_path(group.post_id, group.id) do%>
   <span class="group__name__head"><%= group.name %></span><br>
-  <span class="group__create__time">更新日時: <%= group.updated_at.strftime("%Y-%m-%d %H:%M:%S") %></span>
+  <span class="group__create__time">更新日時: <%= group.updated_at.strftime("%m月%d日 %H:%M") %></span>
   <div class="posts">
       <div class="post__content">
         <div class="post__content__upper">
@@ -16,7 +16,7 @@
           <%= group.post.user.nickname %>さんの投稿
           
           </div>
-          <%= group.post.created_at.strftime("%Y-%m-%d %H:%M:%S") %>
+          <%= group.post.created_at.strftime("%m月%d日 %H:%M") %>
         </div>
 
         <div class="post__content__middle">
