@@ -10,7 +10,6 @@
 
 ![FireShot Capture 021 - Hello Cat! - hellocat jp](https://user-images.githubusercontent.com/64569250/84568655-e888f200-adbb-11ea-8cff-875dc0990a36.png)
 
-![FireShot Capture 018 - Hello Cat! - hellocat jp](https://user-images.githubusercontent.com/64569250/84568558-30f3e000-adbb-11ea-88da-9397b8601cb8.png)
 
 ![FireShot Capture 020 - Hello Cat! - hellocat jp](https://user-images.githubusercontent.com/64569250/84568637-b8415380-adbb-11ea-8ac3-4b9fc1fb25bb.png)
 
@@ -51,7 +50,8 @@
 
 ### インフラ構成図
 
-![hellocat-infra](https://user-images.githubusercontent.com/64569250/84569064-c0e75900-adbe-11ea-940a-88fec00184e7.png)
+![hellocat-infra](https://user-images.githubusercontent.com/64569250/84594231-de362900-ae8b-11ea-8393-b7449c5787e3.png)
+
 
 ### バックエンド
 
