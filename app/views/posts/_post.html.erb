@@ -13,6 +13,9 @@
         <%= post.created_at.strftime("%m月%d日 %H:%M") %>
       </div>
 
+       
+
+
       <div class="post__content__middle">
         <div class="post__content__image">
           <%= image_tag post.image.url, class: "post__image" %>
@@ -50,9 +53,19 @@
       <div class="post__content__bottom">
         <div class="post__content__left__part">
           <%= simple_format post.content %>
+
           
         </div>
       </div>   
+          <% if current_user.already_liked?(post) %>
+            <%= link_to  post_like_path(post, 1), method: :delete do %>
+              <i class="fas fa-heart" id="heart__pink"> <%= post.likes.count %>件のいいニャ</i>
+            <% end %>
+          <% else %>
+            <%= link_to post_likes_path(post), method: :post do %>
+              <i class="far fa-heart" id="heart__gray"> <%= post.likes.count %>件のいいニャ</i>
+            <% end %>
+          <% end %>
     </div>
   <% end %>
   <% end %>

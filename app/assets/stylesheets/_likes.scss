@@ -1,0 +1,23 @@
+#heart__gray {
+  font-size: 20px;
+  color: gray;
+  float: right;
+}
+
+#heart__pink {
+  font-size: 20px;
+  color: rgb(248, 149, 165);
+  float: right;
+}
+
+@media(max-width: 480px) {
+  #heart__gray { 
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  #heart__pink {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+}
