@@ -50,7 +50,7 @@
 
 ### インフラ構成図
 
-![hellocat-infra](https://user-images.githubusercontent.com/64569250/84594231-de362900-ae8b-11ea-8393-b7449c5787e3.png)
+![hellocat-infra](https://user-images.githubusercontent.com/64569250/84594348-982d9500-ae8c-11ea-8b2b-1290c25a0daf.png)
 
 
 ### バックエンド
