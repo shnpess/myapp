@@ -13,6 +13,9 @@
         <%= post.created_at.strftime("%m月%d日 %H:%M") %>
       </div>
 
+       
+
+
       <div class="post__content__middle">
         <div class="post__content__image">
           <%= image_tag post.image.url, class: "post__image" %>
@@ -50,9 +53,13 @@
       <div class="post__content__bottom">
         <div class="post__content__left__part">
           <%= simple_format post.content %>
+
           
         </div>
       </div>   
+          <div id="like_box_<%= post.id %>">
+            <%= render partial: 'likes/like', locals: { post: post} %>
+          </div>
     </div>
   <% end %>
   <% end %>

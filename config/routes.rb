@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     collection do
       get 'search'
     end
+    resources :likes, only: [:create, :destroy]
     resources :comments, only: [:create, :destroy]
     resources :groups, only: :create do
       resources :messages, only: [:index, :create]

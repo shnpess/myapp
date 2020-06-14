@@ -9,5 +9,11 @@ class User < ApplicationRecord
   has_many :comments  
   has_many :group_users
   has_many :groups, through: :group_users
+  has_many :likes, dependent: :destroy
+  has_many :liked_posts, through: :likes, source: :post
   mount_uploader :picture, ImageUploader
+
+  def already_liked?(post)
+    self.likes.exists?(post_id: post.id)
+  end
 end

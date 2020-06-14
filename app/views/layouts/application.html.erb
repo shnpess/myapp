@@ -66,6 +66,11 @@
 
             <% else %>
             <div class="menu__item">
+              <%= link_to top_guest_sign_in_path, method: :post do %>
+              簡単ログイン
+              <% end %>
+            </div>
+            <div class="menu__item">
               <%= link_to new_user_session_path do %>
                ログイン
               <% end %>
@@ -127,7 +132,9 @@
             <% end %>
 
             <% else %>
-
+            <%= link_to top_guest_sign_in_path, method: :post do %>
+            <li><i class="far fa-user">かんたんログイン</i></li>
+            <% end %>
             <%= link_to new_user_session_path do %>
               <li><i class="far fa-user"></i> ログイン</li>
             <% end %>

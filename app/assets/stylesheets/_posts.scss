@@ -235,6 +235,7 @@
   }
 }
 
+
 .edit {
   margin-top: 10px;
   z-index: 100;
@@ -283,6 +284,7 @@
 
 a, a:visited, a:focus, a:hover {
   text-decoration: none;
+  color: black;
 }
 
 
@@ -299,7 +301,7 @@ a, a:visited, a:focus, a:hover {
 
 .chat__form {
   position: absolute;
-  bottom: 10px;
+  bottom: 50px;
   right: 10px;
   padding: 10px;
 }
