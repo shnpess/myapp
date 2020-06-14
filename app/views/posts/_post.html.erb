@@ -57,15 +57,9 @@
           
         </div>
       </div>   
-          <% if current_user.already_liked?(post) %>
-            <%= link_to  post_like_path(post, 1), method: :delete do %>
-              <i class="fas fa-heart" id="heart__pink"> <%= post.likes.count %>件のいいニャ</i>
-            <% end %>
-          <% else %>
-            <%= link_to post_likes_path(post), method: :post do %>
-              <i class="far fa-heart" id="heart__gray"> <%= post.likes.count %>件のいいニャ</i>
-            <% end %>
-          <% end %>
+          <div id="like_box_<%= post.id %>">
+            <%= render partial: 'likes/like', locals: { post: post} %>
+          </div>
     </div>
   <% end %>
   <% end %>

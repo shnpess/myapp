@@ -70,6 +70,9 @@
           <%= form.submit "#{@post.user.nickname}さんとチャットする", class: "chat__send" %>
         <% end %>
       </div>
+      <div id="like_box_<%= @post.id %>">
+            <%= render partial: 'likes/like', locals: { post: @post} %>
+      </div>
   </div>
 </div>
 
