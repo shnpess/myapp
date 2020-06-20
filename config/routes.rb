@@ -18,4 +18,4 @@ Rails.application.routes.draw do
   resources :groups, only: [:index, :destroy]
   resources :helps, only: :index
   post '/top/guest_sign_in', to: 'top#new_guest'
-  end
+end
