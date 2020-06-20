@@ -17,37 +17,7 @@
 
 
 
-# Offense count: 8
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: space, no_space
-Layout/SpaceInsideParens:
-  Exclude:
-    - 'spec/models/post_spec.rb'
-    - 'spec/models/user_spec.rb'
 
-# Offense count: 2
-# Cop supports --auto-correct.
-Layout/SpaceInsidePercentLiteralDelimiters:
-  Exclude:
-    - 'config/deploy.rb'
-
-# Offense count: 10
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: final_newline, final_blank_line
-Layout/TrailingEmptyLines:
-  Exclude:
-    - 'Gemfile'
-    - 'app/controllers/groups_controller.rb'
-    - 'app/views/api/messages/index.json.jbuilder'
-    - 'config/deploy.rb'
-    - 'config/deploy/production.rb'
-    - 'config/initializers/carrierwave.rb'
-    - 'config/unicorn.rb'
-    - 'spec/factories/posts.rb'
-    - 'spec/models/post_spec.rb'
-    - 'spec/models/user_spec.rb'
 
 # Offense count: 37
 # Cop supports --auto-correct.

@@ -17,7 +17,7 @@ describe Post do
 
     it "名前が8文字以上だと登録出来ないこと" do
       user = create(:user)
-      post = build(:post, name: "a" * 9 )
+      post = build(:post, name: "a" * 9)
       post.valid?
       expect(post.errors[:name]).to include("は8文字以内で入力してください")
     
@@ -25,7 +25,7 @@ describe Post do
 
     it "名前が7文字の場合は登録出来ること" do
       user = create(:user)
-      post = build(:post, name: "a" * 7 )
+      post = build(:post, name: "a" * 7)
       expect(post).to be_valid
     end
 
