@@ -10,33 +10,8 @@
 
 
 
-# Offense count: 1
-# Cop supports --auto-correct.
-Layout/EmptyLineAfterGuardClause:
-  Exclude:
-    - 'app/models/application_record.rb'
 
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: AllowAdjacentOneLineDefs, NumberOfEmptyLines.
-Layout/EmptyLineBetweenDefs:
-  Exclude:
-    - 'app/controllers/groups_controller.rb'
 
-# Offense count: 24
-# Cop supports --auto-correct.
-Layout/EmptyLines:
-  Exclude:
-    - 'Gemfile'
-    - 'app/controllers/comments_controller.rb'
-    - 'app/controllers/groups_controller.rb'
-    - 'app/controllers/posts_controller.rb'
-    - 'app/controllers/users_controller.rb'
-    - 'app/models/post.rb'
-    - 'config/deploy/production.rb'
-    - 'config/deploy/staging.rb'
-    - 'db/migrate/20200512115212_devise_create_users.rb'
-    - 'spec/models/user_spec.rb'
 
 # Offense count: 4
 # Cop supports --auto-correct.

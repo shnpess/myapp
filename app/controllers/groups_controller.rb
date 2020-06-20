@@ -4,7 +4,6 @@ class GroupsController < ApplicationController
     @groups = current_user.groups.order("updated_at DESC")
   end
 
-
   def create
     post = Post.find(params[:post_id])
     group = Group.create(name: "#{current_user.nickname}さんと#{post.user.nickname}さんのチャットルーム", post_id:(params[:post_id]),  user_ids: [current_user.id, post.user.id])

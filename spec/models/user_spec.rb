@@ -57,7 +57,5 @@ describe Post do
       expect(user).to be_valid
     end
 
-
-
   end
 end

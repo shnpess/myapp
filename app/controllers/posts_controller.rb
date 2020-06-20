@@ -64,8 +64,6 @@ class PostsController < ApplicationController
     @posts = Post.search(params[:keyword])
   end
 
-
-
   private
   def post_params
     params.require(:post).permit(:name, :age, :vaccination, :kind, :gender, :character, :image, :content, :category_ids).merge(user_id: current_user.id)
@@ -73,7 +71,6 @@ class PostsController < ApplicationController
   end
 
   
-
 
   
 end
