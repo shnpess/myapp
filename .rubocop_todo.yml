@@ -20,64 +20,8 @@
 
 
 
-# Offense count: 3
-# Cop supports --auto-correct.
-Lint/ParenthesesAsGroupedExpression:
-  Exclude:
-    - 'app/controllers/posts_controller.rb'
-    - 'app/controllers/users_controller.rb'
 
-# Offense count: 1
-Lint/ShadowingOuterLocalVariable:
-  Exclude:
-    - 'app/controllers/top_controller.rb'
 
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: IgnoreEmptyBlocks, AllowUnusedKeywordArguments.
-Lint/UnusedBlockArgument:
-  Exclude:
-    - 'config/deploy.rb'
-
-# Offense count: 2
-# Cop supports --auto-correct.
-# Configuration parameters: AllowUnusedKeywordArguments, IgnoreEmptyMethods, IgnoreNotImplementedMethods.
-Lint/UnusedMethodArgument:
-  Exclude:
-    - 'app/controllers/application_controller.rb'
-    - 'app/uploaders/image_uploader.rb'
-
-# Offense count: 7
-Lint/UselessAssignment:
-  Exclude:
-    - 'spec/models/post_spec.rb'
-
-# Offense count: 2
-# Configuration parameters: IgnoredMethods.
-Metrics/AbcSize:
-  Max: 19
-
-# Offense count: 4
-# Configuration parameters: CountComments, ExcludedMethods.
-# ExcludedMethods: refine
-Metrics/BlockLength:
-  Max: 49
-
-# Offense count: 1
-# Configuration parameters: CountComments, ExcludedMethods.
-Metrics/MethodLength:
-  Max: 11
-
-# Offense count: 4
-# Configuration parameters: Database, Include.
-# SupportedDatabases: mysql, postgresql
-# Include: db/migrate/*.rb
-Rails/BulkChangeTable:
-  Exclude:
-    - 'db/migrate/20200512115212_devise_create_users.rb'
-    - 'db/migrate/20200513135041_add_age_to_posts.rb'
-    - 'db/migrate/20200517124804_remove_weight_to_posts.rb'
-    - 'db/migrate/20200518022442_add_column_posts.rb'
 
 # Offense count: 1
 # Configuration parameters: EnforcedStyle.

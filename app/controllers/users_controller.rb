@@ -31,7 +31,7 @@ class UsersController < ApplicationController
       redirect_to posts_path
     else
       flash.now[:alert] = "編集に失敗しました"
-      render ("users/edit")
+      render("users/edit")
     end
   end
 
