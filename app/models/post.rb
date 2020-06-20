@@ -1,8 +1,8 @@
 class Post < ApplicationRecord
   mount_uploader :image, ImageUploader
   validates :content, :name, presence: true
-  validates :name, length: { maximum: 8 }  
-  validates :content, length: { maximum: 100 }   
+  validates :name, length: { maximum: 8 }
+  validates :content, length: { maximum: 100 }
   belongs_to :user
   has_many :comments
   has_many :groups

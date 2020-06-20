@@ -16,7 +16,7 @@ set :rbenv_ruby, '2.6.3'
 
 # どの公開鍵を利用してデプロイするか
 set :ssh_options, auth_methods: ['publickey'],
-                  keys: ['~/Downloads/AWS/hellocat-ssh-key.pem'] 
+                  keys: ['~/Downloads/AWS/hellocat-ssh-key.pem']
 
 # プロセス番号を記載したファイルの場所
 set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }

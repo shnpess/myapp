@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: :index
   before_action :category_action, only: [:index, :edit, :new, :create]
-  
 
   def index
     @posts = Post.includes(:user).order("created_at DESC")
@@ -15,7 +14,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create(post_params) 
+    @post = Post.create(post_params)
     if @post.save
       flash[:notice] = "投稿完了しました"
       redirect_to posts_path
@@ -67,10 +66,5 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:name, :age, :vaccination, :kind, :gender, :character, :image, :content, :category_ids).merge(user_id: current_user.id)
-  
   end
-
-  
-
-  
 end

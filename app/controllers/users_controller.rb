@@ -3,9 +3,8 @@ class UsersController < ApplicationController
   before_action :category_action, only: :show
   def index
     @users = User.all
-    
   end
-  
+
   def show
     @user = User.find(params[:id])
     @posts = @user.posts
@@ -40,6 +39,5 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:nickname, :addres, :email, :picture, :profile)
-  
   end
 end

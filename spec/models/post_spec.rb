@@ -20,7 +20,6 @@ describe Post do
       post = build(:post, name: "a" * 9)
       post.valid?
       expect(post.errors[:name]).to include("は8文字以内で入力してください")
-    
     end
 
     it "名前が7文字の場合は登録出来ること" do

@@ -3,10 +3,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   validates :nickname, :email, uniqueness: true
   validates :nickname, :email, presence: true
-  validates :nickname, length: { maximum: 6 } 
-  validates :profile, length: { maximum: 70 } 
+  validates :nickname, length: { maximum: 6 }
+  validates :profile, length: { maximum: 70 }
   has_many :posts
-  has_many :comments  
+  has_many :comments
   has_many :group_users
   has_many :groups, through: :group_users
   has_many :likes, dependent: :destroy
