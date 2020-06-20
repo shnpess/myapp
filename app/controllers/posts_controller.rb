@@ -44,8 +44,8 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.update(post_params)
     if @post.save
-    flash[:notice] = "編集完了しました"
-    redirect_to post_path(@post.id)
+      flash[:notice] = "編集完了しました"
+      redirect_to post_path(@post.id)
     else
       flash.now[:alert] = "編集に失敗しました"
       render ("posts/edit")

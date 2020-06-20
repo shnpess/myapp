@@ -6,7 +6,7 @@ class GroupsController < ApplicationController
 
   def create
     post = Post.find(params[:post_id])
-    group = Group.create(name: "#{current_user.nickname}さんと#{post.user.nickname}さんのチャットルーム", post_id:(params[:post_id]), user_ids: [current_user.id, post.user.id])
+    group = Group.create(name: "#{current_user.nickname}さんと#{post.user.nickname}さんのチャットルーム", post_id: (params[:post_id]), user_ids: [current_user.id, post.user.id])
     redirect_to post_group_messages_path(post.id, group.id)
   end
 end
