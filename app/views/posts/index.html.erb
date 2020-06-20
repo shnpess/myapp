@@ -5,35 +5,7 @@
   <div class="modal fade" id="post" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
-        <div class="form">
-          <%= form_with(model: @post, local: true) do |form| %>
-            <div class="modal-body">
-              <div class="form__contents">
-                <% if @post.image.present? %>
-                  <%= image_tag @post.image.url, id: :img_prev %>
-                <% else %>
-                  <%= image_tag "", id: :img_prev, alt: "画像がありません"  %>
-                <% end %>
-                <%= form.label :image, class: "form__image" do %> 
-                  <i class="fas fa-image fa-2x"></i>
-                  <%= form.file_field :image %>
-                  <span class="form__image__text">画像を追加する</span>
-                <% end %> 
-                  
-                <div class="form__area">名前: <%= form.text_field :name, placeholder: "例)太郎"%></div>
-                <div class="form__area">種類: <%= form.collection_select :kind, @category_kind, :name, :name, prompt: "選択してください" %></div>
-                <div class="form__area">年齢: <%= form.collection_select :age, @category_age, :name, :name, prompt: "選択してください" %></div>
-                <div class="form__area">性別: <%= form.collection_select :gender, @category_gender, :name, :name, prompt: "選択してください" %></div>
-                <div class="form__area">ﾜｸﾁﾝ: <%= form.collection_select :vaccination, @category_vaccination, :name, :name, prompt: "選択してください" %></div>
-                <div class="form__area">性格: <%= form.collection_select :character, @category_character, :name, :name, prompt: "選択してください" %></div>
-                <div class="form__area"> <%= form.text_area :content, placeholder: "好きなコメントをどうぞ！", class: "form__content", cols: 5 %></div>
-               <div class="footer__btn">
-                <%= form.submit "SEND", class: "send__btn" %>
-                <button type="button" class="close__btn" data-dismiss="modal">閉じる</button>
-               </div> 
-            </div>
-          <% end %>
-        </div>
+        <%= render partial: "form" %>
       </div>
     </div>
   </div>

@@ -2,77 +2,77 @@
   <i class="fas fa-paw"> <%= @post.user.nickname %>さんの投稿詳細</i>
 </div>
 <div class="edit">
-<% if user_signed_in? && current_user.id == @post.user_id %>
-  <%= link_to post_path(@post.id), method: :delete do %>
-    <div class="destroy__form">
-      削除する
-    </div>
+  <% if user_signed_in? && current_user.id == @post.user_id %>
+    <%= link_to post_path(@post.id), method: :delete do %>
+      <div class="destroy__form">
+        削除する
+      </div>
+    <% end %>
+    <%= link_to edit_post_path(@post.id) do %>
+      <div class="edit__form">
+        編集する
+      </div>
+    <% end %>
   <% end %>
-  <%= link_to edit_post_path(@post.id) do %>
-    <div class="edit__form">
-      編集する
-    </div>
-  <% end %>
-<% end %>
 </div>
 
 <div class="posts">
-    <div class="post__content">
-      <div class="post__content__upper">
-        <div class="user__info">
+  <div class="post__content">
+    <div class="post__content__upper">
+      <div class="user__info">
         <%= image_tag @post.user.picture.url, class: "post__user__image" %>
         <%= @post.user.nickname %>さんの投稿
-        </div>
-        <%= @post.created_at.strftime("%m月%d日 %H:%M") %>
+      </div>
+      <%= @post.created_at.strftime("%m月%d日 %H:%M") %>
+    </div>
+
+    <div class="post__content__middle">
+      <div class="post__content__image">
+        <%= image_tag @post.image.url, class: "post__image" %>
       </div>
 
-      <div class="post__content__middle">
-        <div class="post__content__image">
-          <%= image_tag @post.image.url, class: "post__image" %>
-        </div>
-
-        <div class="post__content__right">
-          <div class="ma">
-            <div class="post__content__right__part">
-              <i class="fas fa-paw"> 名前：<%= @post.name %></i>
-            </div>
-            <div class="post__content__right__part">
-             <i class="fas fa-paw">  種類：<%= @post.kind %></i>
-            </div>
-            <div class="post__content__right__part">
-             <i class="fas fa-paw">  年齢：<%= @post.age %></i>
-            </div>
-            <div class="post__content__right__part">
-             <i class="fas fa-paw">  出身：<%= @post.user.addres %></i>
-            </div>
+      <div class="post__content__right">
+        <div class="ma">
+          <div class="post__content__right__part">
+            <i class="fas fa-paw"> 名前：<%= @post.name %></i>
           </div>
-          <div class="ma">
-            <div class="post__content__right__part">
-             <i class="fas fa-paw">  性別：<%= @post.gender %></i>
-            </div>
-            <div class="post__content__right__part">
-             <i class="fas fa-paw">  ﾜｸﾁﾝ：<%= @post.vaccination %></i>
-            </div>
-            <div class="post__content__right__part">
-             <i class="fas fa-paw">  性格：<%= @post.character %></i>
-            </div>
-          </div>  
+          <div class="post__content__right__part">
+            <i class="fas fa-paw">  種類：<%= @post.kind %></i>
+          </div>
+          <div class="post__content__right__part">
+            <i class="fas fa-paw">  年齢：<%= @post.age %></i>
+          </div>
+          <div class="post__content__right__part">
+            <i class="fas fa-paw">  出身：<%= @post.user.addres %></i>
+          </div>
         </div>
+        <div class="ma">
+          <div class="post__content__right__part">
+            <i class="fas fa-paw">  性別：<%= @post.gender %></i>
+          </div>
+          <div class="post__content__right__part">
+            <i class="fas fa-paw">  ﾜｸﾁﾝ：<%= @post.vaccination %></i>
+          </div>
+          <div class="post__content__right__part">
+            <i class="fas fa-paw">  性格：<%= @post.character %></i>
+          </div>
+        </div>  
       </div>
+    </div>
 
-      <div class="post__content__bottom">
-        <div class="post__content__left__part">
-          <%= simple_format @post.content %>
-        </div>
+    <div class="post__content__bottom">
+      <div class="post__content__left__part">
+        <%= simple_format @post.content %>
       </div>
-      <div class="chat__form">
-        <%= form_with(model: [@post, @group], local: true) do |form| %>
-          <%= form.submit "#{@post.user.nickname}さんとチャットする", class: "chat__send" %>
-        <% end %>
-      </div>
-      <div id="like_box_<%= @post.id %>">
-        <%= render partial: 'likes/like', locals: { post: @post} %>
-      </div>
+    </div>
+    <div class="chat__form">
+      <%= form_with(model: [@post, @group], local: true) do |form| %>
+        <%= form.submit "#{@post.user.nickname}さんとチャットする", class: "chat__send" %>
+      <% end %>
+    </div>
+    <div id="like_box_<%= @post.id %>">
+      <%= render partial: 'likes/like', locals: { post: @post} %>
+    </div>
   </div>
 </div>
 
@@ -80,29 +80,21 @@
 
 
 
-      <h4 class="comment__index"><i class="fas fa-paw"> コメント一覧</i></h4>
+  <h4 class="comment__index"><i class="fas fa-paw"> コメント一覧</i></h4>
   <div class="comment__container">
     <div class="comments">
-
       <% if @comments %>
         <% @comments.each do |comment| %>
-        
-
         <div class="comment__left">
-      <%= image_tag comment.user.picture.url, id: "comment__left__user__image" %>
-      <div class="comment__message__left__content">
-      <%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>:
-        <%= comment.text %> 
-      
-      </div>
-    </div>
+          <%= image_tag comment.user.picture.url, id: "comment__left__user__image" %>
+          <div class="comment__message__left__content">
+            <%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>:
+            <%= comment.text %> 
+          </div>
+        </div>
         <div class="comment__left__created">
         <%= comment.created_at.strftime("%m月%d日 %H:%M") %>
         </div>
-
-
-
-
         <% end %>
       <% end %>
     </div>
@@ -115,7 +107,7 @@
       <% else %>
         <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
       <% end %>
-      </div>
+    </div>
   </div>
 
 
