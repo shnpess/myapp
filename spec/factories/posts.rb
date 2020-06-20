@@ -1,5 +1,4 @@
 FactoryBot.define do
-
   factory :post do
     name              {"ころ"}
     kind              {"アメリカンショートヘアー"}

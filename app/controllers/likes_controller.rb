@@ -11,5 +11,4 @@ class LikesController < ApplicationController
     @like.destroy
     
   end
-
 end

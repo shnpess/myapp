@@ -56,6 +56,5 @@ describe Post do
       user = build(:user, password: "a" * 6 )
       expect(user).to be_valid
     end
-
   end
 end

@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   
   protected
+
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname])
   end
@@ -17,5 +18,4 @@ class ApplicationController < ActionController::Base
     @category_gender = Category.where("id >= ?", 40).where("id <= ?", 42)
     @category_vaccination = Category.where("id >= ?", 43).where("id <= ?", 44)
   end
-
 end

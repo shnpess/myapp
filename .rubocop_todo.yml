@@ -13,43 +13,7 @@
 
 
 
-# Offense count: 4
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: around, only_before
-Layout/EmptyLinesAroundAccessModifier:
-  Exclude:
-    - 'app/controllers/application_controller.rb'
-    - 'app/controllers/comments_controller.rb'
-    - 'app/controllers/posts_controller.rb'
-    - 'app/controllers/users_controller.rb'
 
-# Offense count: 3
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: empty_lines, no_empty_lines
-Layout/EmptyLinesAroundBlockBody:
-  Exclude:
-    - 'spec/factories/posts.rb'
-    - 'spec/models/post_spec.rb'
-    - 'spec/models/user_spec.rb'
-
-# Offense count: 10
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: empty_lines, empty_lines_except_namespace, empty_lines_special, no_empty_lines, beginning_only, ending_only
-Layout/EmptyLinesAroundClassBody:
-  Exclude:
-    - 'app/controllers/application_controller.rb'
-    - 'app/controllers/comments_controller.rb'
-    - 'app/controllers/likes_controller.rb'
-    - 'app/controllers/messages_controller.rb'
-    - 'app/controllers/posts_controller.rb'
-    - 'app/controllers/users_controller.rb'
-    - 'app/models/application_record.rb'
-    - 'app/models/category.rb'
-    - 'app/models/post.rb'
-    - 'test/controllers/top_controller_test.rb'
 
 # Offense count: 4
 # Cop supports --auto-correct.

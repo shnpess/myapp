@@ -49,6 +49,5 @@ describe Post do
       post.valid?
       expect(post.errors[:content]).to include("を入力してください")
     end
-
   end
 end

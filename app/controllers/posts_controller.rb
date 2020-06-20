@@ -1,5 +1,4 @@
 class PostsController < ApplicationController
-
   before_action :authenticate_user!, except: :index
   before_action :category_action, only: [:index, :edit, :new, :create]
   
@@ -65,6 +64,7 @@ class PostsController < ApplicationController
   end
 
   private
+
   def post_params
     params.require(:post).permit(:name, :age, :vaccination, :kind, :gender, :character, :image, :content, :category_ids).merge(user_id: current_user.id)
   
