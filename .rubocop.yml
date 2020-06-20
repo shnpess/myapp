@@ -48,3 +48,7 @@ Metrics/MethodLength:
   Enabled: false
 Lint/ShadowingOuterLocalVariable:
   Enabled: false
+Rails/UniqueValidationWithoutIndex:
+  Enabled: false
+Style/GuardClause:
+  Enabled: false
