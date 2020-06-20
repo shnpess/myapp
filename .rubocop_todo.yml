@@ -15,33 +15,6 @@
 
 
 
-# Offense count: 4
-# Cop supports --auto-correct.
-Layout/EmptyLinesAroundMethodBody:
-  Exclude:
-    - 'app/controllers/api/messages_controller.rb'
-    - 'app/controllers/comments_controller.rb'
-    - 'db/migrate/20200517124633_remove_age_to_posts.rb'
-    - 'db/migrate/20200522131241_addkindness_to_categories.rb'
-
-# Offense count: 4
-# Cop supports --auto-correct.
-# Configuration parameters: AllowForAlignment, AllowBeforeTrailingComments, ForceEqualSignAlignment.
-Layout/ExtraSpacing:
-  Exclude:
-    - 'app/controllers/groups_controller.rb'
-    - 'app/controllers/messages_controller.rb'
-    - 'config/deploy.rb'
-    - 'config/initializers/carrierwave.rb'
-
-# Offense count: 2
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: normal, indented_internal_methods
-Layout/IndentationConsistency:
-  Exclude:
-    - 'app/controllers/groups_controller.rb'
-    - 'app/uploaders/image_uploader.rb'
 
 # Offense count: 7
 # Cop supports --auto-correct.

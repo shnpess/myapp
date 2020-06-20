@@ -5,7 +5,6 @@ class CommentsController < ApplicationController
     comment = Comment.create(comment_params)
     
     redirect_to post_path(comment.post_id)
-
   end
 
   def destroy

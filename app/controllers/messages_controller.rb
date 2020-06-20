@@ -18,7 +18,7 @@ class MessagesController < ApplicationController
     @message = @group.messages.create(message_params)
     if @message.save
       respond_to do |format|
-        format.html { redirect_to post_group_messages_path(@post.id, @group.id)  }
+        format.html { redirect_to post_group_messages_path(@post.id, @group.id) }
         format.json
       end
       
