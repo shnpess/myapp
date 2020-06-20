@@ -1,4 +1,3 @@
 class HelpsController < ApplicationController
-  def index
-  end
+  def index; end
 end

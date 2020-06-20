@@ -1,8 +1,6 @@
 class PostsController < ApplicationController
-
   before_action :authenticate_user!, except: :index
   before_action :category_action, only: [:index, :edit, :new, :create]
-  
 
   def index
     @posts = Post.includes(:user).order("created_at DESC")
@@ -16,13 +14,13 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create(post_params) 
+    @post = Post.create(post_params)
     if @post.save
       flash[:notice] = "投稿完了しました"
       redirect_to posts_path
     else
       flash.now[:alert] = "投稿に失敗しました"
-      render ("posts/new")
+      render("posts/new")
     end
   end
 
@@ -45,11 +43,11 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.update(post_params)
     if @post.save
-    flash[:notice] = "編集完了しました"
-    redirect_to post_path(@post.id)
+      flash[:notice] = "編集完了しました"
+      redirect_to post_path(@post.id)
     else
       flash.now[:alert] = "編集に失敗しました"
-      render ("posts/edit")
+      render("posts/edit")
     end
   end
 
@@ -64,16 +62,9 @@ class PostsController < ApplicationController
     @posts = Post.search(params[:keyword])
   end
 
-
-
   private
+
   def post_params
     params.require(:post).permit(:name, :age, :vaccination, :kind, :gender, :character, :image, :content, :category_ids).merge(user_id: current_user.id)
-  
   end
-
-  
-
-
-  
 end
