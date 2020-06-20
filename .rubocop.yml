@@ -42,8 +42,6 @@ Metrics/AbcSize:
   Enabled: false
 Style/MutableConstant:
   Enabled: false
-StringLiterals:
-  EnforcedStyle: single_quotes
 Metrics/MethodLength:
   Enabled: false
 Lint/ShadowingOuterLocalVariable:
@@ -51,4 +49,8 @@ Lint/ShadowingOuterLocalVariable:
 Rails/UniqueValidationWithoutIndex:
   Enabled: false
 Style/GuardClause:
+  Enabled: false
+Style/StringLiterals:
+  Enabled: false
+Style/SymbolArray:
   Enabled: false

@@ -14,6 +14,6 @@ class User < ApplicationRecord
   mount_uploader :picture, ImageUploader
 
   def already_liked?(post)
-    self.likes.exists?(post_id: post.id)
+    likes.exists?(post_id: post.id)
   end
 end
