@@ -1,3 +1,5 @@
+// --投稿ページ--
+
 @mixin form__part {
   width: 25vw;
   height: 35px;
@@ -39,6 +41,8 @@
     }
   }
 }
+
+// --投稿内容--
 
 .form__area {
   padding: 10px;
