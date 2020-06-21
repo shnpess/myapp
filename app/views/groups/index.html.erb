@@ -9,50 +9,7 @@
   <span class="group__create__time">更新日時: <%= group.updated_at.strftime("%m月%d日 %H:%M") %></span>
   <div class="posts">
       <div class="post__content">
-        <div class="post__content__upper">
-          <div class="user__info">
-          <%= image_tag group.post.user.picture.url, class: "post__user__image" %>
-          
-          <%= group.post.user.nickname %>さんの投稿
-          
-          </div>
-          <%= group.post.created_at.strftime("%m月%d日 %H:%M") %>
-        </div>
-
-        <div class="post__content__middle">
-          <div class="post__content__image">
-            <%= image_tag group.post.image.url, class: "post__image" %>
-          </div>
-
-          <div class="post__content__right">
-            <div class="ma">
-              <div class="post__content__right__part">
-                名前：<%= group.post.name %>
-              </div>
-              <div class="post__content__right__part">
-                種類：<%= group.post.kind %>
-              </div>
-              <div class="post__content__right__part">
-                年齢：<%= group.post.age %>
-              </div>
-              <div class="post__content__right__part">
-              出身：<%= group.post.user.addres %>
-            </div>
-            </div>
-            <div class="ma">
-              <div class="post__content__right__part">
-                性別：<%= group.post.gender %>
-              </div>
-              <div class="post__content__right__part">
-                予防接種：<%= group.post.vaccination %>
-              </div>
-              <div class="post__content__right__part">
-                性格：<%= group.post.character %>
-              </div>
-            </div>  
-          </div>
-        </div>
-
+        <%= render partial: 'posts/post_form', locals: { post: group.post} %>
         <div class="post__content__bottom">
           <div class="post__content__left__part">
             <%= simple_format group.post.content %>

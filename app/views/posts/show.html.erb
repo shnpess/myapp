@@ -1,6 +1,7 @@
 <div class="my__page">
   <i class="fas fa-paw"> <%= @post.user.nickname %>さんの投稿詳細</i>
 </div>
+<%# --編集ボタン-- %>
 <div class="edit">
   <% if user_signed_in? && current_user.id == @post.user_id %>
     <%= link_to post_path(@post.id), method: :delete do %>
@@ -18,47 +19,7 @@
 <%# 投稿カード部分 %>
 <div class="posts">
   <div class="post__content">
-    <div class="post__content__upper">
-      <div class="user__info">
-        <%= image_tag @post.user.picture.url, class: "post__user__image" %>
-        <%= @post.user.nickname %>さんの投稿
-      </div>
-      <%= @post.created_at.strftime("%m月%d日 %H:%M") %>
-    </div>
-
-    <div class="post__content__middle">
-      <div class="post__content__image">
-        <%= image_tag @post.image.url, class: "post__image" %>
-      </div>
-
-      <div class="post__content__right">
-        <div class="ma">
-          <div class="post__content__right__part">
-            <i class="fas fa-paw"> 名前：<%= @post.name %></i>
-          </div>
-          <div class="post__content__right__part">
-            <i class="fas fa-paw">  種類：<%= @post.kind %></i>
-          </div>
-          <div class="post__content__right__part">
-            <i class="fas fa-paw">  年齢：<%= @post.age %></i>
-          </div>
-          <div class="post__content__right__part">
-            <i class="fas fa-paw">  出身：<%= @post.user.addres %></i>
-          </div>
-        </div>
-        <div class="ma">
-          <div class="post__content__right__part">
-            <i class="fas fa-paw">  性別：<%= @post.gender %></i>
-          </div>
-          <div class="post__content__right__part">
-            <i class="fas fa-paw">  ﾜｸﾁﾝ：<%= @post.vaccination %></i>
-          </div>
-          <div class="post__content__right__part">
-            <i class="fas fa-paw">  性格：<%= @post.character %></i>
-          </div>
-        </div>  
-      </div>
-    </div>
+    <%= render partial: 'posts/post_form', locals: { post: @post} %>
     <div class="post__content__bottom">
       <div class="post__content__left__part">
         <%= simple_format @post.content %>
