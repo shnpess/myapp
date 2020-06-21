@@ -1,37 +1,39 @@
+
 <div class="chat__wrapper">
   <div class="chat__content">
     <% @messages.each do |message| %>
-    <% if message.user_id == current_user.id %>
-    <div class="chat__message__content" data-message-id= <%=message.id %>>
-      <div class="chat__message__right">
-        <%= image_tag current_user.picture.url, id: "message__right__user__image" %>
-        <div class="chat__message__right__content">
-          <%= message.content %> 
+    <%# --自分のメッセージ-- %>
+      <% if message.user_id == current_user.id %>
+      <div class="chat__message__content" data-message-id= <%=message.id %>>
+        <div class="chat__message__right">
+          <%= image_tag current_user.picture.url, id: "message__right__user__image" %>
+          <div class="chat__message__right__content">
+            <%= message.content %> 
+          </div>
         </div>
+          <div class="message__right__created">
+            <%= message.created_at.strftime("%m月%d日 %H時%M分") %>
+          </div>
       </div>
-        <div class="message__right__created">
-          <%= message.created_at.strftime("%m月%d日 %H時%M分") %>
+      <% else %>
+      <%# --相手のメッセージ-- %>
+      <div class="chat__message__content" data-message-id= <%=message.id %>>
+        <div class="chat__msessage__left">
+          <%= image_tag message.user.picture.url, id: "message__left__user__image" %>
+          <div class="chat__message__left__content">
+            <%= message.content %> 
+          </div>
+          <div class="message__left__created">
+          <%= message.created_at.strftime("%m月%d日 %H:%M") %>
+          </div> 
         </div>
-    </div>
-    <% else %>
-    <div class="chat__message__content" data-message-id= <%=message.id %>>
-      <div class="chat__msessage__left">
-        <%= image_tag message.user.picture.url, id: "message__left__user__image" %>
-        <div class="chat__message__left__content">
-          <%= message.content %> 
-        </div>
-        <div class="message__left__created">
-        <%= message.created_at.strftime("%m月%d日 %H:%M") %>
-        </div> 
-      </div>
-    <% end %>
+      <% end %>
     <% end %>
     </div>
   </div>
 
-
-
- <div>
+<%# --メッセージ送信ボタン-- %>
+  <div>
     <%= form_with(model: [@post, @group, @message], class: "comment__form", id: "new__message", local: true) do |form| %>
       <%= form.text_area :content, placeholder: "コメントする", class: "comment__input", rows: "2" %>
       <%= form.submit "SEND", class: "comment__send__btn" %>

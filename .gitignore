@@ -26,6 +26,6 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 public/uploads/*
-rspec.xml
+/rspec.xml
 .rubocop_todo.yml
 
