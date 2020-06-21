@@ -1,3 +1,5 @@
+// --新規登録画面--
+
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
 .login-page {
@@ -5,6 +7,7 @@
   padding: 8% 0 0;
   margin: auto;
 }
+
 .login__form {
   position: relative;
   z-index: 1;
@@ -15,6 +18,7 @@
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
+
 .field {
   font-family: "Roboto", sans-serif;
   outline: 0;
@@ -26,6 +30,7 @@
   box-sizing: border-box;
   font-size: 14px;
 }
+
 .form__submit {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
@@ -41,6 +46,7 @@
   cursor: pointer;
   margin: 25px 0;
 }
+
 .form__submit:hover,.form button:active,.form button:focus {
   background: #ffcc99;
 }

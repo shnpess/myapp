@@ -1,9 +1,9 @@
+// --検索窓--
+
 .serch__content {
   margin-top: 20px;
   margin-left: 50px;
 }
-
-
 
 .search__form__input {
   border: 3px solid #999;
@@ -12,11 +12,12 @@
   height: 35px;
   width: 300px;
   overflow: hidden;
-  
 }
+
 .search__form__input:focus {
   outline: 0;
 }
+
 .search_btn{
   cursor: pointer;
   font-family: FontAwesome;

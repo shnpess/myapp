@@ -1,14 +1,16 @@
 @media(max-width: 480px) {
+
   .form__string {
     width: 70%;
   }
 
   .form__contents--center {
+    
     .user__form__content {
       width: 100%;
       margin-left: 10px;
     }
-}
+  }
 }
 
 .field_with_errors {
