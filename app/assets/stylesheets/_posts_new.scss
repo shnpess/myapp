@@ -4,24 +4,18 @@
   margin-top: 20px;
 }
 
-
 .form {
   padding: 50px;
   background-color: #f7e8da;
   
-
   .form__contents {
     display: flex;
     flex-direction: column;
-    
-  
     
     .form__contents span {
       display: inline;
       font-weight: bold;
     }
-
-    
 
     .form__content {
       @include form__part;
@@ -31,20 +25,18 @@
     }
 
     .form__image {
-     
       cursor: pointer;
       color: #FF9933;
       
       input{
         display: none;
       }
+
       &__text {
         font-size: 16px;
         color: #FF9933;
-       
       }
     }
-    
   }
 }
 
@@ -52,29 +44,20 @@
   padding: 10px;
 }
 
-
-
 #img_prev {
   width: 400px;
   height: 300px;
   border-radius: 10px;
-  // background: #fffde8;
   display: none;
-  // box-shadow: 0px 0px 0px 10px #fffde8;/*線の外側*/
-  // border: dashed 2px #ffb03f;/*破線*/
- margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 #img_prevs {
   width: 400px;
   height: 300px;
   border-radius: 10px;
-  // background: #fffde8;
   display: none;
-  // box-shadow: 0px 0px 0px 10px #fffde8;/*線の外側*/
-  // border: dashed 2px #ffb03f;/*破線*/
   margin-bottom: 10px;
-
 }
 
 .close__btn {
@@ -84,7 +67,7 @@
   font-size: 20px;
 }
   
-  .send__btn {
+.send__btn {
   cursor: pointer;
   width: 50%;
   height: 50px;
@@ -103,21 +86,25 @@
   margin-top: 30px;
   width: 90%;
 }
+
 #post_kind {
   height: 30px;
   margin-top: 30px;
   width: 90%;
 }
+
 #post_gender {
   height: 30px;
   margin-top: 30px;
   width: 90%;
 }
+
 #post_vaccination {
   height: 30px;
   margin-top: 30px;
   width: 90%;
 }
+
 #post_character {
   height: 30px;
   margin-top: 30px;

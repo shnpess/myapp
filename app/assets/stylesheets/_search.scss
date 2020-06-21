@@ -3,8 +3,6 @@
   margin-left: 50px;
 }
 
-
-
 .search__form__input {
   border: 3px solid #999;
   padding: 3px 5px;
@@ -12,11 +10,12 @@
   height: 35px;
   width: 300px;
   overflow: hidden;
-  
 }
+
 .search__form__input:focus {
   outline: 0;
 }
+
 .search_btn{
   cursor: pointer;
   font-family: FontAwesome;

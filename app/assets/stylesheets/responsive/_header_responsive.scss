@@ -16,7 +16,6 @@
     font-size: 25px;
     margin-top: 10px;
     
-    // border-bottom: 1px solid #bfbfbf;
       &:first-letter{
       font-size: 35px;
     }
@@ -30,9 +29,7 @@
 
   &__list ul {
     display: none;
-    
   }
-  
 }
 
   .header__logo {
@@ -44,9 +41,9 @@
     height: 100vh;
     display: block;
   }
+
   .left__contents {
     display: none;
-
   }
 
   .right__contents {
@@ -54,6 +51,7 @@
     height: 100vh;
     padding: 5px;
   }
+
   /*----------------------------
   * navi_menu
   *----------------------------*/
@@ -110,9 +108,9 @@
     transform: translateX(100vw);
     transition: all .3s linear;
   }
+  
   /* アニメーション後のメニューの状態 */
   .menu.is-active{
     transform: translateX(0);
   }
-
 }

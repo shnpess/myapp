@@ -28,6 +28,7 @@
       width: 100vw;
       height: 600px;
       padding: 80px 30px;
+
       &__text h2 {
         font-size: 30px;
         font-weight: bold;
@@ -39,7 +40,6 @@
         margin-top: 30px;
         background:rgba(0, 0, 0, 0) 
         linear-gradient(transparent 60%, #FFDFEF 0%) repeat scroll 0 0;
-        
       }
 
       .right-image {

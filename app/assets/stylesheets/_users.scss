@@ -1,43 +1,42 @@
+
+// --ユーザー編集ページ--
 .users {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   padding: 20px;
-  
 }
+
 .user__form {
   padding: 50px;
   background-color: #ffddbc;
 }
+
 .form__contents--center {
   display: flex;
   flex-direction: column;
   align-items: left;
 
   .user__form__content {
-    
     width: 50%;
     height: 140px;
     margin-bottom: 20px;
     padding: 10px;
-
   }
 
   .form__image {
-   
     cursor: pointer;
     color: #FF9933;
     
     input{
       display: none;
     }
+
     &__text {
       font-size: 16px;
       color: #FF9933;
-     
     }
   }
-
 }
 
   .user__content {
@@ -62,17 +61,13 @@
       margin-left: 5px;
       margin-top: 10px;
     }
-
   }
-  
 
-    &__right {
-      padding: 15px 5px 10px 5px;
-      width: 50%;
-      height: 100px;
-      
-    }
-  
+  &__right {
+    padding: 15px 5px 10px 5px;
+    width: 50%;
+    height: 100px;
+  }
 }
 
 .form__string {
@@ -83,7 +78,6 @@
   padding: 10px;
 }
 
-
 .user__image {
   border-radius: 10px;
   height: 90px;
@@ -91,8 +85,7 @@
   margin: 10px;
 }
 
-
-.my__page {
+.mypage {
   border-bottom: 3px dashed black;
   margin: 30px 0 20px 100px;
   height: 50px;
@@ -101,8 +94,8 @@
   color: #744c3a;
   font-size: 24px;
   width: 30%;
-
 }
+
 .setting__page {
   border-bottom: 3px dashed black;
   font-size: 20px;
@@ -136,5 +129,4 @@
   font-weight: bold;
   background:rgba(0, 0, 0, 0) 
   linear-gradient(transparent 80%, #FFDFEF 0%) repeat scroll 0 0;
-  
 }

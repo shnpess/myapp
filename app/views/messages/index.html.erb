@@ -11,9 +11,9 @@
             <%= message.content %> 
           </div>
         </div>
-          <div class="message__right__created">
-            <%= message.created_at.strftime("%m月%d日 %H時%M分") %>
-          </div>
+        <div class="message__right__created">
+          <%= message.created_at.strftime("%m月%d日 %H時%M分") %>
+        </div>
       </div>
       <% else %>
       <%# --相手のメッセージ-- %>

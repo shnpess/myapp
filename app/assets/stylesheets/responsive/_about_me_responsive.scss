@@ -1,4 +1,5 @@
 @media(max-width: 480px) {
+
   .help__title h2 {
     font-size: 22px;
   }
@@ -7,6 +8,7 @@
     font-size: 22px;
     text-align: center;
   }
+
   .help__title__sub h4 {
     font-size: 18px;
     text-align: center;
@@ -21,7 +23,6 @@
 
     &__image {
       width: 80vw;
-
       margin: 10px 0 0 0;
     }
 
@@ -52,8 +53,6 @@
       height: 150px;
       border-radius: 50%;
       margin: 30px;
-    
     }
   }
-
 }

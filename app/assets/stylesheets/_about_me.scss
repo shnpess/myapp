@@ -4,7 +4,6 @@
   font-size: 40px;
   font-weight: bold;
   margin: 50px;
-  
   text-align: center;
   padding: 20px;
 }
@@ -23,6 +22,7 @@
     border-radius: 50%;
     margin: 30px;
   }
+
   .profile__table {
     display: flex;
     flex-direction: column;
@@ -37,6 +37,7 @@
         font-size: 20px;
       }
     }
+    
     .profile__history p {
       margin: 20px;
     }
