@@ -46,13 +46,14 @@
     align-items: center;
     width: 90vw;
     padding: 10px;
+    
+    .profile__image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin: 30px;
+    
+    }
   }
 
-  .profile__image {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin: 30px;
-  
-  }
 }
