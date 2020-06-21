@@ -15,7 +15,7 @@
     <% end %>
   <% end %>
 </div>
-
+<%# 投稿カード部分 %>
 <div class="posts">
   <div class="post__content">
     <div class="post__content__upper">
@@ -59,7 +59,6 @@
         </div>  
       </div>
     </div>
-
     <div class="post__content__bottom">
       <div class="post__content__left__part">
         <%= simple_format @post.content %>
@@ -75,11 +74,7 @@
     </div>
   </div>
 </div>
-
-
-
-
-
+<%# コメント部分 %>
   <h4 class="comment__index"><i class="fas fa-paw"> コメント一覧</i></h4>
   <div class="comment__container">
     <div class="comments">

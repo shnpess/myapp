@@ -13,6 +13,7 @@
   <body>
    <%= render 'layouts/notifications' %>
     <div class="wrapper">
+    <%# 左側のコンテンツ %>
       <div class="left__wrapper">
         <h1>Hello Cat!</h1>
         <div class="left__wrapper__link">
@@ -30,10 +31,9 @@
           <%= link_to helps_path do %>
             <i class="fas fa-paw">Hello Cat!について</i>
           <% end %>
-          
         </div>
       </div>
-
+    <%# 右側のコンテンツ %>
       <div class="right__wrapper">
         <div class="right__wrapper__text">
           <h2>Hello Cat!とは</h2>
@@ -48,7 +48,6 @@
           <%= image_tag "cat02.png", class: "right-image" %>
           <%= image_tag "cat04.png", class: "right-image" %>
         </div>
-        
       </div>
     </div>
   </body>
