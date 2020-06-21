@@ -1,12 +1,16 @@
-# 猫の里親募集アプリ Hello Cat!
+# Hello Cat!
 
-## Overview
+https://hellocat.jp
 
-猫の里親募集アプリです。
 
-"全ての猫が幸せになって欲しい"
+## 機能のご紹介
 
-そんな想いから生まれたHello Cat!は誕生しました。
+
+- SNS投稿型の里親探しアプリです!
+
+- 1 対 1 のチャット機能を実装しており、そちらから細かい相談や質問が可能です!
+
+- コメント機能やいいね機能を実装私することでユーザー同士のコミュニケーションも円滑に!
 
 ![FireShot Capture 021 - Hello Cat! - hellocat jp](https://user-images.githubusercontent.com/64569250/84568655-e888f200-adbb-11ea-8cff-875dc0990a36.png)
 
@@ -44,7 +48,9 @@
 
 #### AWSの各種サービス
 
-- VPC + ECS ＋ ECR ＋ ALB ＋ EC2 ＋ RDS(MySQL) + S3 + Route53 + ACM + Cloud Watch + SES
+- VPC + ALB ＋ EC2 ＋ RDS(MySQL) + S3 + Route53 + ACM + Cloud Watch + SES
+
+- ECS + ECR の導入に挑戦中
 
 本番環境でもコンテナ基盤を使用
 
@@ -72,6 +78,14 @@
 ### 開発環境
 
 - Docker
+
+## 今後の実装機能
+
+- いいね一覧
+
+- フォロー/フォロワー機能
+
+- 無限スクロール
 
 ## URL
 
