@@ -1,3 +1,21 @@
+@media(max-width: 1100px) {
+  
+  .group__name {
+    margin: 0;
+    width: 69vw;
+    margin-bottom: 30px;
+  }
+}
+
+@media(max-width: 860px) {
+  
+  .group__name {
+    margin: 0;
+    width: 88vw;
+    margin-bottom: 30px;
+  }
+}
+
 @media(max-width: 480px) {
   
   .group__content {
@@ -13,5 +31,4 @@
   .group__name__head {
     font-size: 20px;
   }
-
 }

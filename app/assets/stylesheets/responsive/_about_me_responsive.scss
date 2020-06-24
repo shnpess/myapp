@@ -1,4 +1,30 @@
-@media(max-width: 480px) {
+@media(max-width: 1150px) {
+
+  .help__function {
+    width: 70vw;
+    height: 100%;
+    padding: 10px;
+
+    .help__function__image {
+      width: 30vw;
+      height: 200px;
+    }
+  }
+
+  .profile__title {
+    width: 100%;
+  }
+
+  .profile__content {
+    flex-direction: column;
+    align-items: center;
+    width: 70vw;
+    padding: 10px;
+  }
+}
+
+
+@media(max-width: 860px) {
 
   .help__title h2 {
     font-size: 22px;
