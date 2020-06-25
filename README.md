@@ -10,7 +10,7 @@ https://hellocat.jp
 
 - 1 対 1 のチャット機能を実装しており、そちらから細かい相談や質問が可能です!
 
-- コメント機能やいいね機能を実装私することでユーザー同士のコミュニケーションも円滑に!
+- コメント機能やいいね機能を実装することでユーザー同士のコミュニケーションも円滑に!
 
 ![FireShot Capture 021 - Hello Cat! - hellocat jp](https://user-images.githubusercontent.com/64569250/84568655-e888f200-adbb-11ea-8cff-875dc0990a36.png)
 
@@ -32,7 +32,7 @@ https://hellocat.jp
 
 - CircleCIでCI/CD パイプラインの構築。
 
-- ローカルと本番にDocker
+- ローカルにDocker(現在ECSを利用して本番環境での運用に挑戦中)
 
 3. 最適な設計
 
