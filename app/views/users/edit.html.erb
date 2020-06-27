@@ -2,6 +2,13 @@
   <i class="fas fa-paw"> <%= @user.nickname %>さんの編集ページ</i>
 </div>
 <%= render partial: 'posts/post_error', locals: { post: @user} %>
+<div class="withdrawal">
+  <%= link_to user_path(current_user.id), method: :delete do %>
+    <div class="destroy__form">
+      退会する
+    </div>
+  <% end %>
+</div>
 <%# --投稿フォーム-- %>
 <div class="user__form">
   <%= form_with(model: @user, local: true) do |form| %>
