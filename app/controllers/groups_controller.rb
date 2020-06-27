@@ -18,6 +18,7 @@ class GroupsController < ApplicationController
   end
 
   private
+
   def post_params
     params.require(:group).permit(:name).merge(user_id: current_user.id)
   end
