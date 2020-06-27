@@ -8,17 +8,22 @@
   <span class="group__name__head"><%= group.name %></span><br>
   <span class="group__create__time">更新日時: <%= group.updated_at.strftime("%m月%d日 %H:%M") %></span>
   <div class="posts">
-      <div class="post__content">
-        <%= render partial: 'posts/post_form', locals: { post: group.post} %>
-        <div class="post__content__bottom">
-          <div class="post__content__left__part">
-            <%= simple_format group.post.content %>
-            
+    <div class="post__content">
+      <%= render partial: 'posts/post_form', locals: { post: group.post} %>
+      <div class="post__content__bottom">
+        <div class="post__content__left__part">
+          <%= simple_format group.post.content %>
+        </div>
+      </div>   
+      <div class="chat__form">
+        <%= link_to group_path(group.id), method: :delete do %>
+          <div class="destroy__form">
+            グループを削除する
           </div>
-        </div>   
+        <% end %>
       </div>
+    </div>
   </div>
-
 <% end %>
 </div>
 <% end %>

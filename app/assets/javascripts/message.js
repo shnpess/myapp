@@ -47,7 +47,7 @@ $(function(){
          var html = buildHTML(data);
          $('.chat__content').append(html);
          $('.right__contents ').animate({ scrollTop: $('.right__contents ')[0].scrollHeight});
-         $('form')[0].reset();
+         $('.comment__input').val('');
          $('.comment__send__btn').prop('disabled', false);
       })
   });
