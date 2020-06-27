@@ -40,9 +40,9 @@
 
           .post__image {
             border-radius: 10px;
-            height: 25vh;
+            height: 40vh;
             width: 50vw;
-            margin: 10px 0 0 0;
+            margin: 10px 0;
           }
         }
       }
@@ -225,11 +225,14 @@
        display: flex;
        flex-direction: column;
         
-       .post__image {
-          border-radius: 10px;
-          height: 25vh;
-          width: 75vw;
-          margin-top: 10px;
+       .post__content__image {
+
+         .post__image {
+           border-radius: 10px;
+           height: 25vh;
+           width: 75vw;
+           margin: 10px 0;
+          }
         }
       }
 
