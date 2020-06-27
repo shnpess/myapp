@@ -14,7 +14,7 @@ Rails.application.routes.draw do
       end
     end
   end
-  resources :users, only: [:show, :index, :edit, :update]
+  resources :users, only: [:show, :index, :edit, :update, :destroy]
   resources :groups, only: [:index, :destroy]
   resources :helps, only: :index
   post '/top/guest_sign_in', to: 'top#new_guest'

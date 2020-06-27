@@ -35,6 +35,13 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    user = current_user
+    user.destroy
+    flash[:notice] = "退会しました"
+    redirect_to posts_path
+  end
+
   private
 
   def user_params
