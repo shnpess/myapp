@@ -12,8 +12,6 @@ https://hellocat.jp
 
 - コメント機能やいいね機能を実装することでユーザー同士のコミュニケーションも円滑に!
 
-![FireShot Capture 021 - Hello Cat! - hellocat jp](https://user-images.githubusercontent.com/64569250/84568655-e888f200-adbb-11ea-8cff-875dc0990a36.png)
-
 
 ![FireShot Capture 020 - Hello Cat! - hellocat jp](https://user-images.githubusercontent.com/64569250/84568637-b8415380-adbb-11ea-8ac3-4b9fc1fb25bb.png)
 
@@ -32,15 +30,15 @@ https://hellocat.jp
 
 - CircleCIでCI/CD パイプラインの構築。
 
-- ローカルにDocker(現在ECSを利用して本番環境での運用に挑戦中)
+- ローカルと本番環境でのにDocker運用
 
-3. 最適な設計
+3. UI/UXにこだわり
 
-- インフラ
+- デザインはシンプルで分かりやすく
 
-- 開発環境のコンテナ構成
+- チャット機能などに非同期通信を実装
 
-- テーブル設計
+- レスポンシブ化
 
 ## 言語・フレームワーク・インフラ
 
@@ -48,15 +46,14 @@ https://hellocat.jp
 
 #### AWSの各種サービス
 
-- VPC + ALB ＋ EC2 ＋ RDS(MySQL) + S3 + Route53 + ACM + Cloud Watch + SES
+- VPC + ALB ＋ EC2 ＋ RDS(MySQL) + S3 + Route53 + ACM + Cloud Watch + ECR + ECS
 
-- ECS + ECR の導入に挑戦中
 
-本番環境でもコンテナ基盤を使用
+- 本番環境でもコンテナ基盤を使用
 
 ### インフラ構成図
 
-![hellocat-infra](https://user-images.githubusercontent.com/64569250/84594348-982d9500-ae8c-11ea-8b2b-1290c25a0daf.png)
+![hellocat-infra](https://user-images.githubusercontent.com/64569250/86451116-699d2e80-bd55-11ea-8e40-adc3111dca72.png)
 
 
 ### バックエンド
