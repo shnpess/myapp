@@ -11,8 +11,7 @@ jobs:
         - MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
         - MYSQL_ROOT_HOST: '127.0.0.1'
 
-    working_directory: ~/myapp  #自身のアプリディレクトリ名を設定  
-
+    working_directory: ~/myapp  
 
     steps:
     - checkout
@@ -81,3 +80,61 @@ jobs:
             exit 0
           fi
           bundle exec cap production deploy
+
+
+
+# ----------------コンテナ自動デプロイ------------------
+
+# orbs:
+#   aws-ecr: circleci/aws-ecr@6.7.0
+#   aws-ecs: circleci/aws-ecs@1.1.0
+# workflows:
+#   # Nginxのデプロイ
+#   nginx-deploy:
+#     jobs:
+#       - aws-ecr/build-and-push-image:
+#           context: docker_app
+#           account-url: AWS_ECR_ACCOUNT_URL
+#           region: AWS_REGION
+#           aws-access-key-id: AWS_ACCESS_KEY_ID
+#           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
+#           create-repo: true
+#           dockerfile: ./nginx/Dockerfile
+#           repo: nginx
+#           tag: "${CIRCLE_SHA1}"
+#           filters:
+#             branches:
+#               only: master
+#       - aws-ecs/deploy-service-update:
+#           context: docker_app
+#           requires:
+#             - aws-ecr/build-and-push-image
+#           family: 'nginx-rails-app' # ECSのタスク定義名
+#           cluster-name: '${ECS_ARN}'  #ECSのクラスターのARN
+#           service-name: 'docker-service'  #サービス名
+#           container-image-name-updates: "container=nginx,tag=${CIRCLE_SHA1}" #コンテナ名
+
+# # railsデプロイ
+#   rails-deploy:
+#     jobs:
+#       - aws-ecr/build-and-push-image:
+#           context: docker_app
+#           account-url: AWS_ECR_ACCOUNT_URL
+#           region: AWS_REGION
+#           aws-access-key-id: AWS_ACCESS_KEY_ID
+#           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
+#           create-repo: true
+#           dockerfile: ./Dockerfile
+#           repo: rails-api
+#           tag: "${CIRCLE_SHA1}"
+#           filters:
+#             branches:
+#               only: master
+#       - aws-ecs/deploy-service-update:
+#           context: docker_app
+#           requires:
+#             - aws-ecr/build-and-push-image
+#           family: 'nginx-rails-app' # ECSのタスク定義名
+#           cluster-name: '${ECS_ARN}' #ECSのクラスターのARN
+#           service-name: 'docker-service' #サービス名
+#           container-image-name-updates: "container=rails,tag=${CIRCLE_SHA1}" #コンテナ名
