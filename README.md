@@ -30,7 +30,7 @@ https://hellocat.jp
 
 - CircleCIでCI/CD パイプラインの構築。
 
-- ローカルと本番環境でのにDocker運用
+- ローカルと本番環境にDocker運用
 
 3. UI/UXにこだわり
 
@@ -53,7 +53,9 @@ https://hellocat.jp
 
 ### インフラ構成図
 
-![hellocat-infra](https://user-images.githubusercontent.com/64569250/86451116-699d2e80-bd55-11ea-8e40-adc3111dca72.png)
+<!-- ![hellocat-infra](https://user-images.githubusercontent.com/64569250/86451116-699d2e80-bd55-11ea-8e40-adc3111dca72.png) -->
+
+![hellocat-infra](https://user-images.githubusercontent.com/64569250/86487849-316c0f00-bd9a-11ea-9d54-7f681d0490f5.png)
 
 
 
