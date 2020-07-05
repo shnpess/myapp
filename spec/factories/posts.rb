@@ -1,5 +1,6 @@
 FactoryBot.define do
   factory :post do
+    id                { "1" }
     name              { "ころ" }
     kind              { "アメリカンショートヘアー" }
     gender            { "オス" }
@@ -7,7 +8,7 @@ FactoryBot.define do
     age               { "１歳" }
     character         { "大人しい" }
     image             { "猫1.jpg" }
-    user_id           { 1 }
+    user_id           { "1" }
     content           { "テストテスト" }
   end
 end

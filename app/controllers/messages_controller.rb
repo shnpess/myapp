@@ -24,7 +24,7 @@ class MessagesController < ApplicationController
     else
       @messages = @group.messages.includes(:user)
       flash.now[:alert] = 'メッセージを入力してください。'
-      render :index
+      redirect_to post_group_messages_path(@post.id, @group.id)
     end
   end
 
