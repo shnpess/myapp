@@ -11,9 +11,6 @@ class MessagesController < ApplicationController
       flash[:alert] = '権限がありません。'
       redirect_to posts_path
     end
-    if current_user.picture == nil
-      current_user.picture = cat01.png
-    end
   end
 
   def create
