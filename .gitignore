@@ -30,3 +30,4 @@ rspec.xml
 .rubocop_todo.yml
 .DS_Store
 
+rspec.xml
