@@ -27,7 +27,5 @@
 /config/master.key
 public/uploads/*
 rspec.xml
-.rubocop_todo.yml
 .DS_Store
-
 rspec.xml
