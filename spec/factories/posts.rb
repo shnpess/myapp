@@ -10,5 +10,6 @@ FactoryBot.define do
     image             { "猫1.jpg" }
     user_id           { "1" }
     content           { "テストテスト" }
+
   end
 end
