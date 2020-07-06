@@ -4,5 +4,6 @@ FactoryBot.define do
     text       { "こんばんは" }
     user_id       { "1" }
     post_id      { "1" }
+
   end
 end

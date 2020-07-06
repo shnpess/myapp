@@ -7,6 +7,7 @@ class User < ApplicationRecord
   validates :profile, length: { maximum: 70 }
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
+  has_many :messages, dependent: :destroy
   has_many :group_users, dependent: :destroy
   has_many :groups, through: :group_users
   has_many :likes, dependent: :destroy
