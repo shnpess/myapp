@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172957323-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-172957323-1');
+    </script>
     <title>Hello Cat!</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -17,7 +26,7 @@
           <%= image_tag "cat01.png" %>
           <span>Hello Cat!</span>
         </div>
-        <% end %>  
+        <% end %>
 
         <%# ハンバーガーメニュー %>
         <div class="navi__menu">
@@ -43,7 +52,7 @@
             </div>
             <div class="menu__item">
              <%= link_to groups_path, class: "left__content" do %>
-               チャット一覧 
+               チャット一覧
               <% end %>
             </div>
             <div class="menu__item">
@@ -55,11 +64,11 @@
             </div>
             <div class="menu__item">
               <%= link_to helps_path, class: "left__content" do %>
-                Hello Cat! 
+                Hello Cat!
               <% end %>
             </div>
             <div class="menu__item">
-              <%= link_to destroy_user_session_path, method: :delete do %> 
+              <%= link_to destroy_user_session_path, method: :delete do %>
                 Log Out
               <% end %>
             </div>
@@ -87,7 +96,7 @@
             </div>
             <div class="menu__item">
               <%= link_to helps_path, class: "left__content" do %>
-                Hello Cat! 
+                Hello Cat!
               <% end %>
             </div>
             <% end %>
@@ -127,7 +136,7 @@
             <p class="guest">※ゲストユーザーのためユーザー編集機能を制限しています</p>
             <% end %>
 
-            <%= link_to destroy_user_session_path, method: :delete do %> 
+            <%= link_to destroy_user_session_path, method: :delete do %>
               <li><i class="fas fa-sign-out-alt"></i> Log Out</li>
             <% end %>
 
@@ -142,7 +151,7 @@
             <%= link_to new_user_registration_path do %>
               <li><i class="far fa-user"></i> 新規登録</li>
             <% end %>
-            
+
             <% end %>
           </ul>
         </div>
@@ -151,33 +160,33 @@
       <%# サイドバー %>
       <div class="main__contents">
         <div class="left__contents">
-          
+
             <%= link_to posts_path, class: "left__content" do %>
-              <i class="fas fa-paw"> 投稿一覧</i> 
+              <i class="fas fa-paw"> 投稿一覧</i>
             <% end %>
-         
+
           <% if user_signed_in? %>
-          
+
             <%= link_to user_path(current_user.id), class: "left__content" do %>
-              <i class="fas fa-paw"> マイページ</i> 
+              <i class="fas fa-paw"> マイページ</i>
             <% end %>
-         
-            
+
+
               <%= link_to users_path, class: "left__content" do %>
-                <i class="fas fa-paw"> ユーザー</i> 
+                <i class="fas fa-paw"> ユーザー</i>
               <% end %>
-            
-           
+
+
               <%= link_to groups_path, class: "left__content" do %>
-                <i class="fas fa-paw"> チャット一覧</i> 
+                <i class="fas fa-paw"> チャット一覧</i>
               <% end %>
-            
+
           <% end %>
-            
+
             <%= link_to helps_path, class: "left__content" do %>
-              <i class="fas fa-paw"> Hello Cat!</i> 
+              <i class="fas fa-paw"> Hello Cat!</i>
             <% end %>
-          
+
         </div>
         <div class="right__contents">
           <div class="right__content">
@@ -186,6 +195,6 @@
           </div>
         </div>
       </div>
-    </div> 
+    </div>
   </body>
 </html>
